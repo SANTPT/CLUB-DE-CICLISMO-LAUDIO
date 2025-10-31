@@ -11,4 +11,77 @@
   --color-4: #212512;
   --color-5: #358637;
   --color-6: #F8A002;
+  --titulo:  'Inspiration', cursive;
+  --texto:  "Geologica", sans-serif;
+  --nav:  'Jaini', sans-serif;
 }
+
+body {
+  font-family: var(--texto);
+}
+
+/* --------------------------------------------
+   CABECERA
+-------------------------------------------- */
+header {
+  width: 100%;
+  
+}
+.header-top{
+    background: var(--color-6);
+    padding: 1.8rem;
+}
+.header-bottom {
+  display: flex;
+  background:  var(--color-5);
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-bottom img {
+  width: 10%;
+}
+header h2 {    
+  font-family: var(--titulo);
+  color: var(--color-2); 
+  font-size: 4rem;
+  margin-left: -55rem;
+}
+/* --------------------------------------------
+   ENLACES
+-------------------------------------------- */
+nav a {
+  color: var(--color-2);
+  font-family: var(--nav);
+  font-size: 2rem;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+a {
+  text-decoration: none;
+  color: inherit; /* Mismo color que el texto */
+}
+nav a:hover {
+  color: var(--color-6);
+}
+
+/* --------------------------------------------
+   MENÚ HAMBURGUESA SOLO CON HTML + CSS
+-------------------------------------------- */
+/* Oculta checkbox */
+.menu-toggle {
+  display: none;
+}
+/* Icono de hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #4caf50;
+  padding: 10px 20px;
+}
+
