@@ -1,0 +1,70 @@
+/* --- 1. Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 100%; 
+}
+
+.contenedor-principal {
+    max-width: 75rem; /* 1200px / 16 = 75rem */
+    margin: 5rem auto; 
+    padding: 0 1.25rem; 
+}
+
+.seccion-superior {
+    display: flex; 
+    gap: 1.875rem; /* Espacio entre columnas */
+    align-items: stretch; 
+}
+
+
+.imagen-container {
+    flex: 3;
+    max-width: 60%; 
+    flex-shrink: 0;
+}
+
+/* El texto se estira para igualar la altura del contenedor */
+.texto-container {
+    flex: 2;
+    max-width: 40%;
+    font-size: 1rem; 
+}
+
+
+.imagen-ciclistas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Título: Hemos quitado el desplazamiento, si quieres conservarlo, revierte esta regla */
+.texto-container h2 {
+    font-size: 3rem; 
+    margin-top: 0;
+    margin-bottom: 1.25rem; 
+}
+
+/* --- 3. Sección Inferior (Rueda y Texto) --- */
+.contenido-adicional {
+    display: flex;
+    gap: 1.875rem;
+    margin-top: 1.25rem; 
+    align-items: flex-start;
+
+}
+
+.rueda-container {
+    flex-basis: 9.375rem; 
+    flex-shrink: 0;
+    width: 9.375rem;
+    height: 9.375rem;
+    margin-top: 0.625rem;
+}
+
+.texto-inferior {
+    flex-grow: 1;
+    padding-top: 0.3125rem;
+}
