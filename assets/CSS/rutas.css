@@ -1,0 +1,22 @@
+
+
+:root{
+  --color-1: #000000;
+  --color-2: #FFFFFF;
+  --color-3: #f2f2f2;
+  --color-4: #212512;
+  --color-5: #358637;
+  --color-6: #F8A002;
+  --titulo:  'Inspiration', cursive;
+  --texto:  "Geologica", sans-serif;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--texto);
+}
+
+
