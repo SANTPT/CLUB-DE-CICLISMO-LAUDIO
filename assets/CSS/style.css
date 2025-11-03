@@ -29,7 +29,7 @@ header {
 }
 .header-top{
     background: var(--color-6);
-    padding: 1.8rem;
+    padding: 1.5rem;
 }
 .header-bottom {
   display: flex;
@@ -39,16 +39,25 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  padding: 1rem 2rem;
 }
-
-.header-bottom img {
+/* Contenedor del logo + texto */
+.logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* Logo */
+.logo-container img {
   width: 10%;
+  min-width: 7.5rem; /* tamaño minimo fijado */
+  margin-top: -4rem;
 }
-header h2 {    
+.logo-container h2 {    
   font-family: var(--titulo);
   color: var(--color-2); 
   font-size: 4rem;
-  margin-left: -55rem;
+  margin-top: -3rem;
 }
 /* --------------------------------------------
    ENLACES
@@ -57,7 +66,7 @@ nav a {
   color: var(--color-2);
   font-family: var(--nav);
   font-size: 2rem;
-  margin: 0 10px;
+  margin: 0 1rem;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -79,9 +88,57 @@ nav a:hover {
 /* Icono de hamburguesa */
 .menu-icon {
   display: none;
-  font-size: 2em;
+  font-size: 2rem;
   cursor: pointer;
-  color: #4caf50;
-  padding: 10px 20px;
+  color: var(--color-2);
+  padding: 1rem 1.2rem;
+  z-index: 1001;
 }
 
+/* ----------------------------------------------------
+  RESPONSIVE: TELÉFONOS Y TABLETS PEQUEÑAS
+--------------------------------------------------------*/
+@media (max-width: 834px) {
+  .menu-icon {
+    display: flex;
+  }
+  .menu-toggle:checked + .menu-icon + #nav-menu {
+    display: flex;
+  }
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 1.2rem;
+  }
+  #nav-menu a {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    color: var(--color-1);
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 393px) {
+  .logo-container {
+    display: block;
+  }
+  .logo-container h2{
+    font-size: 1.5rem;
+    margin-left: 1.3rem;
+    color: var(--color-6);
+  }
+  nav a {
+    font-size: 1.3rem;
+  }
+  
+}
