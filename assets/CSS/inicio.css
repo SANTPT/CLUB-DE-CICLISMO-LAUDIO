@@ -113,6 +113,7 @@ button p{
 .noticias{
     background-color: var(--color-2);
     grid-area: 2 / 1 / 4/ 3;
+    margin-top: -5rem;
 }
 .noticias h2{
   margin-right: 20rem;
@@ -125,7 +126,7 @@ button p{
   margin-left: 4rem;
 }
 .img-cortizo, .redaccion{
-    flex: 0 1 25rem; /* columnas responsivas */
+    flex: 0 1 40rem; /* columnas responsivas */
 }
 .img-noticia{
   width: 30rem;
@@ -189,15 +190,32 @@ button p{
 }
 
 .archivos{
-  margin-top: 2rem;
+  margin-top: 5rem;
   h3{
   margin-bottom: 2rem;
   }
 }
-
+.categorias{
+  margin-top: 5rem;
+  h3{
+  margin-bottom: 2rem;
+  }
+}
 .elegir{
   max-width: 15rem;
   height: 2.7rem;
   color:#4b4a4a;
   font-size: 1.1rem;
  }
+
+ .color-caja{
+  background: #358637;
+ }
+
+
+/* ----------------------------------------------------
+  RESPONSIVE: TELÉFONOS Y TABLETS PEQUEÑAS
+--------------------------------------------------------*/
+@media (max-width: 834px) {
+ 
+}
