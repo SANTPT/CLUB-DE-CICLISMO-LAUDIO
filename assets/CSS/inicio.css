@@ -19,10 +19,155 @@
 body {
   font-family: var(--texto);
 }
+/* -----------------------------------------------------------
+ EL CARRUSEL DE NUESTRA PAGINA INICIO
+-------------------------------------------------------------*/
+.bienvenido{
+    grid-column: 1 / span 3;
+}
 
-button{
-    background-color: var(--color-5);
-   
-    color: var(--color-2);
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    height: 100%;
+}
+.carrusel-box{
+    width: 100%;
+    max-width: 1280px;
+    height: 60%;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.carrusel-box ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: carrusel 20s infinite linear;
+}
+.carrusel-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.carrusel-box img{
+    width: 100%;
     border-radius: 2rem;
 }
+
+@keyframes carrusel  {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+/* -----------------------------------------------------------
+          SECTION BIENVENIDO + FRASE + BOTON
+-------------------------------------------------------------*/
+h1 {
+  font-family: var(--titulo);
+  font-size: 5rem;
+  margin-top: -0.5rem;
+}
+.bloque-bienvenido h4 {
+  font-family: var(--texto);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  margin-top: -0.5rem;
+}
+
+button{
+    padding: .7rem 1.2rem;
+    background-color: var(--color-5);   
+    color: var(--color-2);
+    border-radius: 2rem;
+    transition:  transform 0.8s;
+    box-shadow: 
+              0 0 0.5rem var(--color-6),
+              0 0 1rem var(--color-6);
+}
+button:hover{
+  background: linear-gradient(135deg, #F8A002, #F2F2F2);
+  color: var(--color-5);
+  transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+  box-shadow: 
+              0 0 0.5rem var(--color-5),
+              0 0 1rem var(--color-5);    
+}
+button p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* -----------------------------------------------------------
+            SECTION DE NOTICIAS
+-------------------------------------------------------------*/
+.noticias{
+    background-color: var(--color-2);
+    grid-area: 2 / 1 / 4/ 3;
+}
+.grid-container h2{
+  text-align: left;
+  font-size: 2rem;
+}
+
+.noticia{
+  display: flex;
+  align-items: center;
+}
+.img-cortizo, .redaccion{
+    flex: 0 1 15rem; /* columnas responsivas */
+}
+.img-noticia{
+  width: 30rem;
+  height: auto;
+}
+.redaccion{
+    text-align: justify;
+    margin-left: 1rem;
+}
+.info{
+  color: var(--color-5);
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+.fecha{
+  font-size: 0.75rem;
+  color: var(--color-4);
+}
+/* -----------------------------------------------------------
+            SECTION ASIDE "barra lateral"
+-------------------------------------------------------------*/
+.barra-lateral{
+    grid-area: 2 / 3 / 4 / 4;
+    border: 2px solid #e0e0e0;
+    padding-top: 5rem; 
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+}
+
+.section-lateral {
+    display: flex;
+    flex-direction: column; /* coloca los h3 en columna */
+    align-items: center;   /* centra horizontalmente todo el contenido */
+    gap: 8rem
+}
+ .buscar{
+  max-width: 12rem;
+  height: 2.7rem;
+  border: 2px solid #e0e0e0;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+
