@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,114 +18,136 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <div class="header-top"></div>
         <div class="header-bottom">
             <div class="logo-container">
-            <img src="assets/img/logo.webp" alt="Nuestro logo del club ciclismo ZikloLaudio">
-            <h2>ZikloLaudio</h2>
-        </div>
+                <img src="assets/img/logo.webp" alt="Nuestro logo del club ciclismo ZikloLaudio">
+                <h2>ZikloLaudio</h2>
+            </div>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">☰</label>
-            
+
             <nav id="nav-menu">
                 <a href="">Inicio</a>
                 <a href="">Quienes somos</a>
                 <a href="">Rutas</a>
                 <a href="">Cursos</a>
-                <a href="">Contacto</a>           
+                <a href="">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <section class="main-section">
+                <h1>Las Mejores rutas en Bici</h1>
+                <p>
+                    Hacer Rutas en bici en Laudio / Llodio es una de las mejores formas de descubrir esta región, aunque
+                    no siempre es fácil saber adónde ir. Para ponértelo fácil, hemos seleccionado las mejores Rutas en
+                    bicicleta en Laudio / Llodio. Encuentra tu favorita y sal a explorar.
+                </p>
+    </section>
+    <div class="div-container">
+        <main>
 
-        <section class="main-section">
-            <h1>Las Mejores rutas en Bici</h1>
-            <p>
-                Hacer Rutas en bici en Laudio / Llodio es una de las mejores formas de descubrir esta región, aunque no siempre es fácil saber adónde ir. Para ponértelo fácil, hemos seleccionado las mejores Rutas en bicicleta en Laudio / Llodio. Encuentra tu favorita y sal a explorar.s
-            </p>
-        </section>
 
-        <section style="margin-top: 7rem;">
-            <h3 class="text-center">Rutas Más Populares</h3>
-        </section>
+            <section style="margin-top: 7rem;">
+                <h3 class="text-center">Rutas Más Populares</h3>
+            </section>
 
-        <section class="section-rutas">
-            <div class="card-ruta">
-                <img src="assets/img/amurio.jpg" alt="Ruta en bici por Amurrio">
-                <img src="assets/img/araba.jpg" alt="Ruta en bici por Araba">
-                <img src="assets/img/cecebre.jpg" alt="Ruta en bici por Cecebre">
-                <img src="assets/img/euskalherria.jpg" alt="Ruta en bici por Euskal Herria">
-                <div>
-                    <br>
-                    <h3>1. Vista de Amurrio y Vista del puerto de Orduña - Recorrido circular desde Llodio</h3>
-                    <br>
-                    <p class="info-ruta">
-                        <i class="fa-solid fa-arrows-left-right"></i> 36.5km · 
-                        <i class="fa-solid fa-clock-rotate-left"></i> 2 horas y 14 minutos · 
-                        <i class="fa-solid fa-arrow-trend-up"></i> 300m ·  
-                        <i class="fa-solid fa-arrow-trend-down"></i> 300m                          
-                    </p>
-                    <br>
-                    <p><i>Paseo en bici moderado. Se necesita buena forma física. Pistas pavimentadas en su mayoría.</i></p>
+            <section class="section-rutas">
+                <div class="card-ruta">
+                    <img src="assets/img/amurio.jpg" alt="Ruta en bici por Amurrio">
+                    <img src="assets/img/araba.jpg" alt="Ruta en bici por Araba">
+                    <img src="assets/img/cecebre.jpg" alt="Ruta en bici por Cecebre">
+                    <img src="assets/img/euskalherria.jpg" alt="Ruta en bici por Euskal Herria">
+                    <div>
+                        <br>
+                        <h3>1. Vista de Amurrio y Vista del puerto de Orduña - Recorrido circular desde Llodio</h3>
+                        <br>
+                        <p class="info-ruta">
+                            <i class="fa-solid fa-arrows-left-right"></i> 36.5km ·
+                            <i class="fa-solid fa-clock-rotate-left"></i> 2 horas y 14 minutos ·
+                            <i class="fa-solid fa-arrow-trend-up"></i> 300m ·
+                            <i class="fa-solid fa-arrow-trend-down"></i> 300m
+                        </p>
+                        <br>
+                        <p><i>Paseo en bici moderado. Se necesita buena forma física. Pistas pavimentadas en su
+                                mayoría.</i></p>
+                    </div>
+                    <div>
+                        <button class="btn-map" name="ruta1" onclick="verMapa(this)">Ver Mapa <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                 </div>
-                <div>
-                    <button class="btn-map" name="ruta1" onclick="verMapa(this)">Ver Mapa <i class="fa-solid fa-arrow-right"></i></button>
+                <div class="card-ruta mapa-oculto" id="ruta1">
+                    <h3>RUTA</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d93272.75705030492!2d-3.0704739138977324!3d43.06722775334406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e1!4m5!1s0xd4fad31bb8c31a5%3A0x1d50b65ee3c58253!2sLaudio%20%2F%20Llodio%2C%2001400%2C%20%C3%81lava!3m2!1d43.1400825!2d-2.9638082999999997!4m5!1s0xd4faf4e15a153f5%3A0x3f82893348638b28!2zVXJkdcOxYSAvIE9yZHXDsWEsIDQ4NDYwLCBWaXpjYXlh!3m2!1d42.9938493!2d-3.0101005!4m5!1s0xd4faea3dc86c34d%3A0xf662866cd264b071!2sAyuntamiento%20de%20Amurrio%2C%20Juan%20de%20Urrutia%20Plaza%2C%201%2C%2001470%20Amurrio%2C%20Araba!3m2!1d43.0526191!2d-3.0010217!5e0!3m2!1ses-419!2ses!4v1762167725359!5m2!1ses-419!2ses"
+                        class="iframe-map" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-            </div>
-            <div class="card-ruta mapa-oculto" id="ruta1">
-                <h3>RUTA</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d93272.75705030492!2d-3.0704739138977324!3d43.06722775334406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e1!4m5!1s0xd4fad31bb8c31a5%3A0x1d50b65ee3c58253!2sLaudio%20%2F%20Llodio%2C%2001400%2C%20%C3%81lava!3m2!1d43.1400825!2d-2.9638082999999997!4m5!1s0xd4faf4e15a153f5%3A0x3f82893348638b28!2zVXJkdcOxYSAvIE9yZHXDsWEsIDQ4NDYwLCBWaXpjYXlh!3m2!1d42.9938493!2d-3.0101005!4m5!1s0xd4faea3dc86c34d%3A0xf662866cd264b071!2sAyuntamiento%20de%20Amurrio%2C%20Juan%20de%20Urrutia%20Plaza%2C%201%2C%2001470%20Amurrio%2C%20Araba!3m2!1d43.0526191!2d-3.0010217!5e0!3m2!1ses-419!2ses!4v1762167725359!5m2!1ses-419!2ses" 
-                    class="iframe-map"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
-        <hr>
-        <section class="section-rutas">
-            <div class="card-ruta">
-                <img src="assets/img/atazar1.jpg" alt="Ruta en bici por atazar montania">
-                <img src="assets/img/atazar2.jpg" alt="Ruta en bici por atazar paisaje">
-                <img src="assets/img/atazar4.jpg" alt="Ruta en bici por atazar">
-                <img src="assets/img/atazar3.jpg" alt="Ruta en bici por atazar camino">
-                <div>
-                    <br>
-                    <h3>2. El Atazar - Vuelta al Porrejon y Peña Cabra - Cerro de la Torrecilla (Ruta de los Collados Altos)</h3>
-                    <br>
-                    <p class="info-ruta">
-                        <i class="fa-solid fa-arrows-left-right"></i> 51,3 km · 
-                        <i class="fa-solid fa-clock-rotate-left"></i> 4 horas 7 minutos · 
-                        <i class="fa-solid fa-arrow-trend-up"></i> 1.383 m ·  
-                        <i class="fa-solid fa-arrow-trend-down"></i> 1.383 m                          
-                    </p>
-                    <br>
-                    <p><i>Es una ruta de fondo en la que tenemos una subida larga al principio con dos descansos y despues para retornar vamos remontando collados faldeando por laderas de una u otra vertiente aunque ya todo es mas favorable. Por tanto si comemos y bebemos bien, no tiene mas dificultad.</i></p>
+            </section>
+            <hr>
+            <section class="section-rutas">
+                <div class="card-ruta">
+                    <img src="assets/img/atazar1.jpg" alt="Ruta en bici por atazar montania">
+                    <img src="assets/img/atazar2.jpg" alt="Ruta en bici por atazar paisaje">
+                    <img src="assets/img/atazar4.jpg" alt="Ruta en bici por atazar">
+                    <img src="assets/img/atazar3.jpg" alt="Ruta en bici por atazar camino">
+                    <div>
+                        <br>
+                        <h3>2. El Atazar - Vuelta al Porrejon y Peña Cabra - Cerro de la Torrecilla (Ruta de los
+                            Collados Altos)</h3>
+                        <br>
+                        <p class="info-ruta">
+                            <i class="fa-solid fa-arrows-left-right"></i> 51,3 km ·
+                            <i class="fa-solid fa-clock-rotate-left"></i> 4 horas 7 minutos ·
+                            <i class="fa-solid fa-arrow-trend-up"></i> 1.383 m ·
+                            <i class="fa-solid fa-arrow-trend-down"></i> 1.383 m
+                        </p>
+                        <br>
+                        <p><i>Es una ruta de fondo en la que tenemos una subida larga al principio con dos descansos y
+                                despues para retornar vamos remontando collados faldeando por laderas de una u otra
+                                vertiente aunque ya todo es mas favorable. Por tanto si comemos y bebemos bien, no tiene
+                                mas dificultad.</i></p>
+                    </div>
+                    <div>
+                        <button class="btn-map" name="ruta2" onclick="verMapa(this)">Ver Mapa <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                 </div>
-                <div>
-                    <button class="btn-map" name="ruta2" onclick="verMapa(this)">Ver Mapa <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-            <div class="card-ruta mapa-oculto" id="ruta2">
-                <h3>RUTA</h3>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d96363.29609209017!2d-3.538401049658455!3d40.99564623042633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e1!4m5!1s0xd43ea44df3ef987%3A0xb1d9a3dd188cfc1f!2sEl%20Atazar%2C%2028189%2C%20Madrid!3m2!1d40.934053299999995!2d-3.4709797!4m5!1s0xd43eb8ca724dcfd%3A0x502979c28d5fb3de!2sPorrej%C3%B3n%20Bajero!3m2!1d40.9819004!2d-3.4792389999999997!4m5!1s0xd43edcc4ac03cd5%3A0x702c1efcd4e8b24c!2sRuta%20Pe%C3%B1a%20de%20la%20Cabra%2C%20M130%2C%2028190%2C%20Madrid!3m2!1d41.0399641!2d-3.4800274!4m5!1s0xd43eb4ba413e24f%3A0x4b8d4eeb7b130163!2sCerro%20de%20la%20Torrecilla!3m2!1d40.9720055!2d-3.4224505!5e0!3m2!1ses-419!2ses!4v1762249837319!5m2!1ses-419!2ses" 
-                    width="600" 
-                    height="450" 
-                    class="iframe-map"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                <div class="card-ruta mapa-oculto" id="ruta2">
+                    <h3>RUTA</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d96363.29609209017!2d-3.538401049658455!3d40.99564623042633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e1!4m5!1s0xd43ea44df3ef987%3A0xb1d9a3dd188cfc1f!2sEl%20Atazar%2C%2028189%2C%20Madrid!3m2!1d40.934053299999995!2d-3.4709797!4m5!1s0xd43eb8ca724dcfd%3A0x502979c28d5fb3de!2sPorrej%C3%B3n%20Bajero!3m2!1d40.9819004!2d-3.4792389999999997!4m5!1s0xd43edcc4ac03cd5%3A0x702c1efcd4e8b24c!2sRuta%20Pe%C3%B1a%20de%20la%20Cabra%2C%20M130%2C%2028190%2C%20Madrid!3m2!1d41.0399641!2d-3.4800274!4m5!1s0xd43eb4ba413e24f%3A0x4b8d4eeb7b130163!2sCerro%20de%20la%20Torrecilla!3m2!1d40.9720055!2d-3.4224505!5e0!3m2!1ses-419!2ses!4v1762249837319!5m2!1ses-419!2ses"
+                        width="600" height="700" class="iframe-map" allowfullscreen="" loading="lazy"
+                        aria-controls="true"
+                        referrerpolicy="no-referrer-when-downgrade">
 
-                </iframe>
-            </div>
-        </section>
+                    </iframe>
+                </div>
+            </section>
 
 
-    </main>
+        </main>
+
+        <aside class="aside-lateral">
+            <div class="aside-container">
+                <ul>
+                    <li><a href="#ruta1"> <i class="fa-solid fa-plus"></i> Rutas en Bilbao</a></li>
+                    <li><a href="#ruta2"> <i class="fa-solid fa-plus"></i> Rutas en Madrid</a></li>
+                    <li><a href="#ruta3"> <i class="fa-solid fa-plus"></i> Rutas en Valencia</a></li>
+                    <li><a href="#ruta4"> <i class="fa-solid fa-plus"></i> Rutas en Barcelona</a></li>
+                    <li><a href="#ruta5"> <i class="fa-solid fa-plus"></i> Rutas en Sevilla</a></li>
+                    <li><a href="#ruta6"> <i class="fa-solid fa-plus"></i> Rutas en Mallorca</a></li>
+                    <li><a href="#ruta7"> <i class="fa-solid fa-plus"></i> Rutas en Andalucía</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -158,30 +181,30 @@
                         <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Privacidad</a></li>
                     </ul>
                 </div>
-            </section>   
+            </section>
         </div>
         <section class="footer-section-2">
-                <p>Copyright 2025 | Club Ciclista ZikloLaudio</p>
-                <br>
+            <p>Copyright 2025 | Club Ciclista ZikloLaudio</p>
+            <br>
         </section>
-        
+
     </footer>
 
     <script>
 
-        function verMapa(btnVerMapa){
+        function verMapa(btnVerMapa) {
             const idRuta = btnVerMapa.name;
             // console.log(idRuta);
             const mapaCard = document.getElementById(idRuta);
 
             if (mapaCard.classList.contains('visible')) {
-               
+
                 mapaCard.style.opacity = '0';
-                
+
                 setTimeout(() => {
                     mapaCard.style.display = 'none';
                     mapaCard.classList.remove('visible');
-                }, 500); 
+                }, 500);
 
                 btnVerMapa.textContent = 'Ver Mapa';
 
@@ -191,7 +214,7 @@
 
                 setTimeout(() => {
                     mapaCard.style.opacity = '1';
-                }, 10); 
+                }, 10);
 
                 btnVerMapa.textContent = 'Ocultar Mapa';
             }
@@ -199,6 +222,7 @@
         }
 
     </script>
-    
+
 </body>
+
 </html>

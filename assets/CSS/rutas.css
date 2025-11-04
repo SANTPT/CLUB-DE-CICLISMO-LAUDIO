@@ -11,11 +11,25 @@
   --nav:  'Jaini', sans-serif;
 }
 
+.div-container{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 5rem;
+  position:relative !important;
+}
+
 main  {
   width: 80%;
   margin: 0 auto;
   /* background-color: var(--color-5); */
   padding: 3rem;
+}
+aside{
+  width: 20%;
 }
 h1{
   font-family: var(--titulo);
@@ -56,24 +70,24 @@ main section div img:hover{
 }
 
 main section div img:nth-child(1){
-  width: 270px;
-  height: 150px;
+  width: 40%;
+  /* height: 150px; */
 }
 main section div img:nth-child(2){
-  width: 200px;
-  height: 150px;
+  width: 40%;
+  /* height: 150px; */
 }
 main section div img:nth-child(3){
-  width: 200px;
-  height: 150px;
+  width: 40%;
+  /* height: 150px; */
 }
 main section div img:nth-child(4){
-  width: 270px;
-  height: 150px;
+  width: 40%;
+  /* height: 150px; */
 }
 
 .card-ruta{
-  width: 45%;
+  width: 70%;
   margin: 0 auto;
   background-color: var(--color-3);
   border: solid 2px #e5e5e5;
@@ -86,6 +100,11 @@ main section div img:nth-child(4){
   align-items: center;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
                 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+iframe{
+  width: 100%;
+  min-height: 300px;
 }
 
 .info-ruta{
@@ -151,7 +170,7 @@ hr{
     justify-content: center; 
     align-items: center; 
     text-align: center; 
-    border-radius: 0.7rem;
+    /* border-radius: 0.7rem; */
     box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 
     background-image: 
@@ -169,4 +188,33 @@ hr{
     margin-bottom: 0.5em;
     
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.aside-lateral{
+  position: sticky;
+  top: 1%;
+  background-color: var(--color-3);
+  border-radius: 0.7rem;
+  border: solid 2px #e5e5e5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  /* padding: 2rem; */
+
+}
+
+.aside-lateral ul li{
+  list-style: none;
+}
+.aside-lateral ul li a{
+  font-size: 1.3rem;
+  display: block;
+  /* background-color: var(--color-6); */
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+.aside-lateral ul li a:hover{
+  background-color: var(--color-6);
 }
