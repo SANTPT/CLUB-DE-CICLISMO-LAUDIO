@@ -1,5 +1,4 @@
 
-
 :root{
   --color-1: #000000;
   --color-2: #FFFFFF;
@@ -9,14 +8,165 @@
   --color-6: #F8A002;
   --titulo:  'Inspiration', cursive;
   --texto:  "Geologica", sans-serif;
+  --nav:  'Jaini', sans-serif;
 }
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--texto);
+main  {
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: var(--color-5); */
+  padding: 3rem;
+}
+h1{
+  font-family: var(--titulo);
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+h3{
+  text-align: center;
+}
+main>section>p{
+  font-family: var(--texto);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
 
+main section div img{
+  border-radius: 0.7rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease-in-out;
+}
+main section div img:hover{
+  transform: scale3d(1.1, 1.1, 1.1);
+}
 
+.section-rutas{
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+main section div img:nth-child(1){
+  width: 270px;
+  height: 150px;
+}
+main section div img:nth-child(2){
+  width: 200px;
+  height: 150px;
+}
+main section div img:nth-child(3){
+  width: 200px;
+  height: 150px;
+}
+main section div img:nth-child(4){
+  width: 270px;
+  height: 150px;
+}
+
+.card-ruta{
+  width: 45%;
+  margin: 0 auto;
+  background-color: var(--color-3);
+  border: solid 2px #e5e5e5;
+  border-radius: 0.7rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+.info-ruta{
+  color: gray;
+}
+
+.iframe-map{
+  border-radius: 0.7rem;
+  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3); */
+  border: 3px solid var(--color-6);
+  width: 100%;
+  height: 100%;
+}
+
+.mapa-oculto{
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s;
+
+}
+.mapa-oculto.visible {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    
+    transition: opacity 0.5s ease-in-out;
+}
+
+.btn-map{
+  background-color: var(--color-6);
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  color: var(--color-2);
+  border: 2px solid transparent;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.5s ease;
+}
+
+.btn-map:hover{
+  background-color: transparent;
+  color: var(--color-6);
+  border: 2px solid var(--color-6);
+  cursor: pointer;
+}
+
+hr{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #ccc;
+}
+
+.main-section {
+    height: 70vh; 
+    padding: 20px;
+    color: white; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: 0.7rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+
+        url('../img/bilbao_hero.jpg'); 
+        
+    background-size: cover;
+    background-position: bottom; 
+    background-attachment: fixed; 
+}
+
+.main-section h1 {
+    font-size: 5rem; 
+    margin-bottom: 0.5em;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
