@@ -42,7 +42,7 @@ body {
 
 /* Título: Hemos quitado el desplazamiento, si quieres conservarlo, revierte esta regla */
 .texto-container h2 {
-    font-size: 3rem; 
+    font-size: 3.5rem; 
     margin-top: 0;
     margin-bottom: 1.25rem; 
 }
@@ -61,7 +61,7 @@ body {
     flex-shrink: 0;
     width: 9.375rem;
     height: 9.375rem;
-    margin-top: 0.625rem;
+    margin-top: 1.625rem;
 }
 
 .texto-inferior {
