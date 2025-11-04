@@ -64,12 +64,12 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
             <h2>Noticias</h2>
             <article class="noticia"> 
                 <img class="img-noticia" src="assets/img/Equipo-cortizo.png" alt="">
-                <p class="redaccion">🏆 Equipo Cortizo y Martín Rey: líderes nacionales sub-23 El Equipo Cortizo, dirigido por Marcos Serrano, cerró la temporada como el mejor conjunto sub-23 del país, acumulando 26 victorias en un año excepcional. <span class="info"><a href="https://equipocortizo.com/el-equipo-cortizo-y-martin-rey-los-mejores-de-la-temporada-en-el-ranking-nacional-sub-23/" target="_blank">+ info</a></span></p>
+                <p class="redaccion"> <span class="sombrear">🏆Equipo Cortizo y Martín Rey:líderes nacionales sub-23</span> <br>El Equipo Cortizo, dirigido por Marcos Serrano, cerró la temporada como el mejor conjunto sub-23 del país, acumulando 26 victorias en un año excepcional. <span class="info"><a href="https://equipocortizo.com/el-equipo-cortizo-y-martin-rey-los-mejores-de-la-temporada-en-el-ranking-nacional-sub-23/" target="_blank">+ info</a></span></p>
             </article>
 
             <article class="noticia"> 
                 <img  class="img-noticia" src="assets/img/Jonathan.png" alt="">
-                <p class="redaccion">Jonathan Lastra reforzará el Euskaltel-Euskadi en 2026 El ciclista bilbaíno Jonathan Lastra (1993) vestirá el maillot  naranja del Euskaltel-Euskadi en la temporada 2026, tras su paso por el  WorldTour con el Cofidis. Con su fichaje, la... <span class="fecha">(30/10/2025)</span>  <span class="info"><a href="https://www.esciclismo.com/actualidad/carretera/88614.html" target="_blank">+ info</a></span></p>
+                <p class="redaccion"><span class="sombrear">Jonathan Lastra reforzará el Euskaltel-Euskadi en 2026</span> <br>El ciclista bilbaíno Jonathan Lastra (1993) vestirá el maillot  naranja del Euskaltel-Euskadi en la temporada 2026, tras su paso por el  WorldTour con el Cofidis. Con su fichaje, la... <span class="fecha">(30/10/2025)</span>  <span class="info"><a href="https://www.esciclismo.com/actualidad/carretera/88614.html" target="_blank">+ info</a></span></p>
             </article>
         </section>
 
@@ -77,34 +77,40 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
         <aside class="barra-lateral">
             <div class="section-lateral">
                 <input class="buscar" type="text" name="buscar" placeholder="Buscar..">
+                <div class="entradas-rec">
+                    <h3>Entradas recientes</h3>
+                    <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p>
+                </div>
 
-                <h3>Entradas recientes</h3>
-                <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p>
+                <div class="archivos"> 
+                    <h3>Archivos</h3>
+                    <select name="mes" class="elegir">
+                        <option  value="">Elegir el mes</option>
+                            <option value="enero">Enero 2025</option>
+                            <option value="febrero">Febrero 2025</option>
+                            <option value="marzo">Marzo 2025</option>
+                            <option value="abril">Abril 2025</option>
+                            <option value="mayo">Mayo 2025</option>
+                            <option value="junio">Junio 2025</option>
+                            <option value="julio">Julio 2025</option>
+                            <option value="agosto">Agosto 2025</option>
+                            <option value="septiembre">Septiembre 2025</option>
+                            <option value="octubre">Octubre 2025</option>
+                            <option value="noviembre">Noviembre 2025</option>
+                            <option value="diciembre">Diciembre 2025</option>
+                    </select>
+                </div>
 
-                <h3>Archivos</h3>
-                <select id="meses" class="mes">
-                    <option value="">Elegir el mes</option>
-                        <option value="enero">Enero 2025</option>
-                        <option value="febrero">Febrero 2025</option>
-                        <option value="marzo">Marzo 2025</option>
-                        <option value="abril">Abril 2025</option>
-                        <option value="mayo">Mayo 2025</option>
-                        <option value="junio">Junio 2025</option>
-                        <option value="julio">Julio 2025</option>
-                        <option value="agosto">Agosto 2025</option>
-                        <option value="septiembre">Septiembre 2025</option>
-                        <option value="octubre">Octubre 2025</option>
-                        <option value="noviembre">Noviembre 2025</option>
-                        <option value="diciembre">Diciembre 2025</option>
-                </select>
-                <h3>Categorías</h3>
-                        <select id="meses" class="mes">
-                    <option value="">Elegir la categoría</option>
-                        <option value="enero">Carreras</option>
-                        <option value="febrero">Eventos</option>
-                        <option value="marzo">Rutas</option>
-                        <option value="abril">Cursos</option>
-                </select>
+                <div class="categorias">
+                    <h3>Categorías</h3>
+                    <select name="categoria" class="elegir">
+                        <option class="elegir" value="">Elegir la categoría</option>
+                        <option value="carreras">Carreras</option>
+                        <option value="eventos">Eventos</option>
+                        <option value="rutas">Rutas</option>
+                        <option value="cursos">Cursos</option>
+                    </select>
+                </div>
             </div>
         </aside>
     </main>
