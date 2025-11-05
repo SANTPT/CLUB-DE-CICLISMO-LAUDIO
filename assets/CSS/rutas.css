@@ -16,7 +16,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row-reverse;
   padding: 5rem;
   position:relative !important;
@@ -26,7 +26,7 @@ main  {
   width: 80%;
   margin: 0 auto;
   /* background-color: var(--color-5); */
-  padding: 3rem;
+  padding: 0 3rem 3rem 3rem;
 }
 aside{
   width: 20%;
@@ -48,6 +48,7 @@ main>section>p{
   font-size: 1.2rem;
 }
 
+
 main section div img{
   border-radius: 0.7rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
@@ -56,6 +57,11 @@ main section div img{
 }
 main section div img:hover{
   transform: scale3d(1.1, 1.1, 1.1);
+}
+.main-section p{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.3rem;
 }
 
 .section-rutas{
@@ -192,11 +198,13 @@ hr{
 
 .aside-lateral{
   position: sticky;
-  top: 1%;
+  top: 2rem;
+  z-index: 10;
   background-color: var(--color-3);
   border-radius: 0.7rem;
   border: solid 2px #e5e5e5;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  justify-content: flex-start;
   /* padding: 2rem; */
 
 }
@@ -206,8 +214,10 @@ hr{
 }
 .aside-lateral ul li a{
   font-size: 1.3rem;
+  font-family: var(--nav);
   display: block;
   /* background-color: var(--color-6); */
+  color: var(--color-4);
   line-height: 2rem;
   margin-bottom: 1rem;
   padding: 1.5rem;
@@ -217,4 +227,96 @@ hr{
 }
 .aside-lateral ul li a:hover{
   background-color: var(--color-6);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  color: var(--color-4);
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+    .div-container{
+      width: 100%;
+        flex-direction: column;
+    }
+    main{
+      width: 100%;
+    }
+    .card-ruta{
+      width: 100%;
+    }
+
+    aside{
+      width: 100%;
+    }
+
+    .aside-lateral ul {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .aside-lateral ul li {
+      width: 100%;
+    }
+    .aside-lateral ul li a{
+      font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    main{
+      padding: 0;
+    }
+    aside{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    main>section>h3{
+      margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .div-container{
+      padding: 0 1rem;
+    }
+    .main-section h1{
+      margin-top: 1rem;
+      font-size: 3.5rem;
+    }
+    .main-section p{
+      font-size: 1.1rem;
+      width: 90%;
+    }
+
+    .card-ruta{
+      padding: 1rem 0 0 0;
+    }
+    .content-card{
+      padding: 1rem;
+    }
+    .btn-map{
+      margin-bottom: 1rem;
+    }
+    iframe{
+      margin-bottom: 1rem;
+    }
+
+    .content-card h3{
+      text-align: justify;
+      font-size: 1rem;
+    }
+    .info-ruta{
+      font-size: 0.7rem;
+    }
+    .card-descripcion{
+      font-size: 0.9rem;
+      text-align: justify;
+    }
+
 }
