@@ -1,5 +1,4 @@
 
-
 :root{
   --color-1: #000000;
   --color-2: #FFFFFF;
@@ -9,14 +8,316 @@
   --color-6: #F8A002;
   --titulo:  'Inspiration', cursive;
   --texto:  "Geologica", sans-serif;
+  --nav:  'Jaini', sans-serif;
+}
+
+.div-container{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  padding: 5rem;
+  position:relative !important;
+}
+
+main  {
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: var(--color-5); */
+  padding: 0 3rem 3rem 3rem;
+}
+aside{
+  width: 20%;
+}
+h1{
+  font-family: var(--titulo);
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+h3{
+  text-align: center;
+}
+main>section>p{
+  font-family: var(--texto);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
 
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--texto);
+main section div img{
+  border-radius: 0.7rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease-in-out;
+}
+main section div img:hover{
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.main-section p{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.section-rutas{
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+main section div img:nth-child(1){
+  width: 40%;
+  /* height: 150px; */
+}
+main section div img:nth-child(2){
+  width: 40%;
+  /* height: 150px; */
+}
+main section div img:nth-child(3){
+  width: 40%;
+  /* height: 150px; */
+}
+main section div img:nth-child(4){
+  width: 40%;
+  /* height: 150px; */
+}
+
+.card-ruta{
+  width: 70%;
+  margin: 0 auto;
+  background-color: var(--color-3);
+  border: solid 2px #e5e5e5;
+  border-radius: 0.7rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+iframe{
+  width: 100%;
+  min-height: 300px;
+}
+
+.info-ruta{
+  color: gray;
+}
+
+.iframe-map{
+  border-radius: 0.7rem;
+  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3); */
+  border: 3px solid var(--color-6);
+  width: 100%;
+  height: 100%;
+}
+
+.mapa-oculto{
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s;
+
+}
+.mapa-oculto.visible {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    
+    transition: opacity 0.5s ease-in-out;
+}
+
+.btn-map{
+  background-color: var(--color-6);
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  color: var(--color-2);
+  border: 2px solid transparent;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.5s ease;
+}
+
+.btn-map:hover{
+  background-color: transparent;
+  transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+  color: var(--color-6);
+  border: 2px solid var(--color-6);
+  cursor: pointer;
+}
+
+hr{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #ccc;
+}
+
+.main-section {
+    height: 70vh; 
+    padding: 20px;
+    color: white; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    /* border-radius: 0.7rem; */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+
+        url('../img/bilbao_hero.jpg'); 
+        
+    background-size: cover;
+    background-position: bottom; 
+    background-attachment: fixed; 
+}
+
+.main-section h1 {
+    font-size: 5rem; 
+    margin-bottom: 0.5em;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.aside-lateral{
+  position: sticky;
+  top: 2rem;
+  z-index: 10;
+  background-color: var(--color-3);
+  border-radius: 0.7rem;
+  border: solid 2px #e5e5e5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  justify-content: flex-start;
+  /* padding: 2rem; */
+
+}
+
+.aside-lateral ul li{
+  list-style: none;
+}
+.aside-lateral ul li a{
+  font-size: 1.3rem;
+  font-family: var(--nav);
+  display: block;
+  /* background-color: var(--color-6); */
+  color: var(--color-4);
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+.aside-lateral ul li a:hover{
+  background-color: var(--color-6);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  color: var(--color-4);
+  
 }
 
 
+@media screen and (max-width: 1024px) {
+    .div-container{
+      width: 100%;
+        flex-direction: column;
+    }
+    main{
+      width: 100%;
+    }
+    .card-ruta{
+      width: 100%;
+    }
+
+    aside{
+      width: 100%;
+    }
+
+    .aside-lateral ul {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .aside-lateral ul li {
+      width: 100%;
+    }
+    .aside-lateral ul li a{
+      font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    main{
+      padding: 0;
+    }
+    aside{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    main>section>h3{
+      margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .div-container{
+      padding: 0 1rem;
+    }
+    .main-section h1{
+      margin-top: 1rem;
+      font-size: 3.5rem;
+    }
+    .main-section p{
+      font-size: 1.1rem;
+      width: 90%;
+    }
+
+    .card-ruta{
+      padding: 1rem 0 0 0;
+    }
+    .content-card{
+      padding: 1rem;
+    }
+    .btn-map{
+      margin-bottom: 1rem;
+    }
+    iframe{
+      margin-bottom: 1rem;
+    }
+
+    .content-card h3{
+      text-align: justify;
+      font-size: 1rem;
+    }
+    .info-ruta{
+      font-size: 0.7rem;
+    }
+    .card-descripcion{
+      font-size: 0.9rem;
+      text-align: justify;
+    }
+
+}
