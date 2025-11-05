@@ -24,17 +24,64 @@ body {
 .seccion-superior {
     display: flex; 
     gap: 1.875rem ; 
-    align-items: flex-start; /
+    align-items: flex-start;
 }
 
 
-.imagen-container {
+.imagen-container-carrusel-box{
     max-width: 45%; 
     flex-shrink: 0;
     margin-left: 10rem;
     margin-top: 1%;
+    overflow: hidden;
+    width: 50rem;
+    height: 32rem;
+    
+}
+.imagen-container-carrusel-box ul{
+    display: flex;
+    padding: 0;
+    width: 500%; 
+    height: 100%;
+    animation: carrusel 15s infinite linear;
 }
 
+.imagen-container-carrusel-box li {
+    width: 20%; 
+    list-style: none;
+    flex-shrink: 0; 
+    position: relative;
+}
+
+.imagen-container-carrusel-box li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 2rem;
+}
+
+@keyframes carrusel {
+    /* IMAGEN 1 (Posición: 0%) - Pausa hasta el 19% */
+    0% { margin-left: 0; }
+    19.5% { margin-left: 0; }
+
+    /* IMAGEN 2 */
+    21% { margin-left: -100%; }
+    40% { margin-left: -100%; }
+
+    /* IMAGEN 3 */
+    40.5% { margin-left: -200%; }
+    60% { margin-left: -200%; }
+
+    /* IMAGEN 4  */
+    61% { margin-left: -300%; }
+    80.5% { margin-left: -300%; }
+
+    /* IMAGEN 5 */
+    81.5% { margin-left: -400%; }
+    100% { margin-left: -400%; }
+
+}
 
 .texto-container {
     flex: 2; 
@@ -151,15 +198,33 @@ position: absolute;
     z-index: 10; 
 
     /* Estilos de apariencia del botón */
-    display: inline-block;
-    padding: 1rem 3rem; 
-    background: linear-gradient(to right, var(--color-5), #358637);
-    color: var(--color-2); 
-    font-size: 1.542rem;
-    border-radius: 2.5rem; 
-    text-decoration: none;
-    margin-left: 5rem;
     
+    display: inline-block;
+    padding: 1.2rem 1.2rem;
+    background-color: var(--color-5);    color: var(--color-2); 
+    font-size: 1.542rem;
+    border-radius: 2rem; 
+    text-decoration: none;
+    margin-left: 8rem;
+    transition:  transform 0.8s;
+    box-shadow: 
+              0 0 0.5rem var(--color-6),
+              0 0 1rem var(--color-6);
+    opacity: 90;
+    
+}
+
+.boton-contacto:hover{
+  background: linear-gradient(135deg, #F8A002, #F2F2F2);
+  color: var(--color-5);
+  transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+  box-shadow: 
+              0 0 0.5rem var(--color-5),
+              0 0 1rem var(--color-5);
+}
+.boton-contacto p{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* --- 4. MEDIA QUERIES (PARA RESPONSIVE) --- */
