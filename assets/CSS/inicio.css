@@ -216,7 +216,7 @@ button p{
 /* ----------------------------------------------------
   RESPONSIVE: TELÉFONOS Y TABLETS PEQUEÑAS
 --------------------------------------------------------*/
-  @media (max-width: 834px) {
+  @media screen and  (max-width: 834px) {
     .bloque-bienvenido h4{
       margin-bottom: 1.5rem;
     }
@@ -242,6 +242,7 @@ button p{
     .redaccion{
       margin-right: 5rem;
       margin-top: -2rem;
+      
     }
     .barra-lateral{
       height: 85%;
@@ -252,22 +253,42 @@ button p{
 }
 
 
-  @media (max-width: 393px) {
-  h1 {
-    font-size: 2.3rem;
-    margin-bottom: 0.3rem;
-  }
-  .bloque-bienvenido h4 {
-    font-size: 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-  button{
-    padding: 0.50rem;
-  }
+  @media screen and  (max-width: 393px) {
+    .grid-container{
+    display: block;
+    } 
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .bloque-bienvenido h4 {
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    button{
+      padding: 0.50rem;
+    }
 
-  button p{
-    font-size: 0.5rem;
-    font-weight: bold;
+    button p{
+      font-size: 0.5rem;
+      font-weight: bold;
+    }
+    .noticias h2{
+    padding-left: 0;
+    margin-left: 3.5rem;
+    }
+    .img-noticia {
+    width: 18rem;
+    margin-left: 1rem;
   }
-
-  }
+    .redaccion{
+      margin-right: 1rem;
+      font-size: 1rem;
+     }
+      .barra-lateral{
+      height: 80%;
+      width: 85%;
+      margin-left: 1.5rem;
+      padding-bottom: 4rem;
+    }
+   }
