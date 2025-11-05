@@ -104,6 +104,14 @@ nav a:hover {
   .menu-icon {
     display: flex;
   }
+  .link-activo{
+    background-color: var(--color-2) !important;
+    transform: scale(1) !important;
+    border-radius: 0 !important;
+    box-shadow: 
+          0 8px 10px -6px rgba(0, 0, 0, 0) !important;
+
+  }
   .menu-toggle:checked + .menu-icon + #nav-menu {
     display: flex;
   }
@@ -142,6 +150,7 @@ nav a:hover {
   nav a {
     font-size: 1.3rem;
   }
+  
   
 }
 .title-page{
