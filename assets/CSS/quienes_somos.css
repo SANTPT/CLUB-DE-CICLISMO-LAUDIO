@@ -43,7 +43,7 @@ body {
     padding: 0;
     width: 500%; 
     height: 100%;
-    animation: carrusel 15s infinite linear;
+    animation: carrusel 12s infinite linear;
 }
 
 .imagen-container-carrusel-box li {
@@ -66,19 +66,19 @@ body {
     19.5% { margin-left: 0; }
 
     /* IMAGEN 2 */
-    21% { margin-left: -100%; }
+    19.6% { margin-left: -100%; }
     40% { margin-left: -100%; }
 
     /* IMAGEN 3 */
-    40.5% { margin-left: -200%; }
+    40.1% { margin-left: -200%; }
     60% { margin-left: -200%; }
 
     /* IMAGEN 4  */
-    61% { margin-left: -300%; }
+    60.1% { margin-left: -300%; }
     80.5% { margin-left: -300%; }
 
     /* IMAGEN 5 */
-    81.5% { margin-left: -400%; }
+    80.6% { margin-left: -400%; }
     100% { margin-left: -400%; }
 
 }
@@ -194,54 +194,91 @@ position: absolute;
 .boton-contacto {
     position: absolute;
     bottom: 3rem; 
-    left: 2rem; 
     z-index: 10; 
-
-    /* Estilos de apariencia del botón */
-    
     display: inline-block;
     padding: 1.2rem 1.2rem;
-    background-color: var(--color-5);    color: var(--color-2); 
+    background-color: var(--color-6);
     font-size: 1.542rem;
-    border-radius: 2rem; 
+    border-radius: 0.7rem; 
     text-decoration: none;
-    margin-left: 8rem;
-    transition:  transform 0.8s;
-    box-shadow: 
-              0 0 0.5rem var(--color-6),
-              0 0 1rem var(--color-6);
-    opacity: 90;
+    margin-left: 6rem;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    color: var(--color-2);
     
 }
 
 .boton-contacto:hover{
-  background: linear-gradient(135deg, #F8A002, #F2F2F2);
-  color: var(--color-5);
+  background-color: transparent;
   transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
-  box-shadow: 
-              0 0 0.5rem var(--color-5),
-              0 0 1rem var(--color-5);
+  color: var(--color-6);
+  border: 2px solid var(--color-6);
+  cursor: pointer;
 }
+
 .boton-contacto p{
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 /* --- 4. MEDIA QUERIES (PARA RESPONSIVE) --- */
-@media (max-width: 768px) {
+/* --- TABLET --- */
+@media (max-width: 834px) {
     .seccion-superior,
     .contenido-adicional {
-        flex-direction: column; /* Apila las secciones verticalmente */
+        flex-direction: column;
         gap: 20px;
+        /* Limpiamos los márgenes externos de las secciones */
+        margin-left: 1rem;
+        margin-right: 1rem; 
     }
 
-    .imagen-container,
+    .imagen-container-carrusel-box,
     .texto-container,
     .rueda-container {
-        max-width: 100%; /* Ocupan todo el ancho */
-        flex: none; /* Desactiva el flex-basis/flex-grow específico */
-        width: 100%;
+        max-width: 100%;
+        margin-left: 0; /* Centrar o resetear márgenes de los contenedores */
+        margin-right: 0;
     }
+    
+    .imagen-container-carrusel-box {
+        margin-top: 1%;
+        overflow: hidden;
+        border-radius: 5rem; 
+    }
+
+    .imagen-container-carrusel-box li img {
+        object-fit: contain; /* Asegura que la imagen completa se vea sin recorte */
+        border-radius: 2rem;
+    }
+
+    /* Ajuste de Texto */
+    .texto-container {
+        max-width: 100%;
+        font-size: 1rem; 
+        padding: 0 1rem; /* Añadir un poco de padding para que el texto no toque los bordes */
+    }
+
+    .texto-container h1 {
+        font-size: 3rem; /* Reducir el tamaño del título */
+    }
+    
+    .texto-container p, 
+    .texto-inferior {
+        font-size: 1.2rem; /* Reducir el tamaño de la fuente para mejor lectura */
+        padding: 0 1rem; /* Asegurar padding en párrafos si fuera necesario */
+    }
+
+    /* Ajustes para la Rueda (Sección Inferior) */
+    .rueda-container {
+        /* Hacemos la rueda más pequeña en móvil y la centramos */
+        width: 15rem; 
+        height: 15rem;
+        margin: 0 auto; 
+    }
+
 
     .rueda-container {
         /* Centrar la rueda si está apilada */
@@ -254,4 +291,8 @@ position: absolute;
     .texto-inferior {
         padding-top: 0;
     }
+
+    /* --- DISPOSITIVO MOVIL --- */
+    @media (max-width: 393px) {
+}
 }
