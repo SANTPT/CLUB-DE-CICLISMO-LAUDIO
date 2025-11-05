@@ -85,22 +85,21 @@ h1 {
 }
 
 button{
-    padding: .7rem 1.2rem;
-    background-color: var(--color-5);   
-    color: var(--color-2);
-    border-radius: 2rem;
-    transition:  transform 0.8s;
-    box-shadow: 
-              0 0 0.5rem var(--color-6),
-              0 0 1rem var(--color-6);
+  background-color: var(--color-6);
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  color: var(--color-2);
+  border: 2px solid transparent;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.5s ease;
 }
 button:hover{
-  background: linear-gradient(135deg, #F8A002, #F2F2F2);
-  color: var(--color-5);
+  background-color: transparent;
   transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
-  box-shadow: 
-              0 0 0.5rem var(--color-5),
-              0 0 1rem var(--color-5);    
+  color: var(--color-6);
+  border: 2px solid var(--color-6);
+  cursor: pointer;  
 }
 button p{
   font-size: 1.2rem;
