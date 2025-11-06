@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contáctanos | ZikloLaudio</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600&family=Inspiration&display=swap"
+        rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/051bfd6557.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
 </head>
+
 <body>
-    
+
+
+
+    <header>
+        <div class="header-top"></div>
+        <div class="header-bottom">
+            <div class="logo-container">
+                <img src="assets/img/logo.webp" alt="Nuestro logo del club ciclismo ZikloLaudio">
+                <h2>ZikloLaudio</h2>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+
+            <nav id="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="quienes_somos.html">Quienes somos</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="Contacto.html"class="link-activo">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="info">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes alguna pregunta o propuesta? Completa el formulario y te responderemos lo antes posible.</p>
+
+            <p><strong>Información de contacto</strong><br>
+                Puedes escribirnos a través del siguiente formulario o directamente en nuestros canales oficiales.</p>
+            <ul>
+                <li>Email: contacto@mimarca.com</li>
+                <li>Teléfono: +34 XXX XXXX</li>
+                <li>Dirección: Calle Ficticia 123</li>
+                <li>Llodio</li>
+            </ul>
+            <img src="ciclista.png" alt="Ilustración ciclista">
+        </div>
+
+        <div class="formulario">
+            <form action="#" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <section class="footer-section-1">
+                <div>
+                    <h4 class="title-page">ZikoLaudio</h4>
+                </div>
+                <div class="footer-socials">
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="https://x.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+            </section>
+            <section class="footer-section-3">
+                <div>
+                    <ul>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Cookies</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Aviso Legal</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Privacidad</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <section class="footer-section-2">
+            <p>Copyright 2025 | Club Ciclista ZikloLaudio</p>
+            <br>
+        </section>
+
+    </footer>
+
 </body>
+
+
 </html>
