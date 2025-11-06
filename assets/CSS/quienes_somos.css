@@ -229,8 +229,7 @@ position: absolute;
     .seccion-superior,
     .contenido-adicional {
         flex-direction: column;
-        gap: 20px;
-        /* Limpiamos los márgenes externos de las secciones */
+        gap: 1.25rem;;
         margin-left: 1rem;
         margin-right: 1rem; 
     }
@@ -242,6 +241,10 @@ position: absolute;
         margin-left: 0; /* Centrar o resetear márgenes de los contenedores */
         margin-right: 0;
     }
+    .imagen-container-carrusel-box li img {
+        object-fit: contain;
+        border-radius: 2rem;
+    }
     
     .imagen-container-carrusel-box {
         margin-top: 1%;
@@ -249,10 +252,6 @@ position: absolute;
         border-radius: 5rem; 
     }
 
-    .imagen-container-carrusel-box li img {
-        object-fit: contain; /* Asegura que la imagen completa se vea sin recorte */
-        border-radius: 2rem;
-    }
 
     /* Ajuste de Texto */
     .texto-container {
@@ -261,10 +260,7 @@ position: absolute;
         padding: 0 1rem; /* Añadir un poco de padding para que el texto no toque los bordes */
     }
 
-    .texto-container h1 {
-        font-size: 3rem; /* Reducir el tamaño del título */
-    }
-    
+
     .texto-container p, 
     .texto-inferior {
         font-size: 1.2rem; /* Reducir el tamaño de la fuente para mejor lectura */
@@ -274,25 +270,66 @@ position: absolute;
     /* Ajustes para la Rueda (Sección Inferior) */
     .rueda-container {
         /* Hacemos la rueda más pequeña en móvil y la centramos */
-        width: 15rem; 
-        height: 15rem;
+        width: 20rem; 
+        height: 20rem;
         margin: 0 auto; 
-    }
-
-
-    .rueda-container {
-        /* Centrar la rueda si está apilada */
-        width: 100px; 
-        height: 100px;
-        margin: 0 auto;
-        margin-top: 10px;
+        margin-bottom: 0.5rem; 
+        margin-top: 0.5rem;
     }
     
+    
     .texto-inferior {
+        width: 100%;
+        margin-top: 0;
         padding-top: 0;
+        padding: 0 1rem;
+        font-size: 1.2rem;
     }
+    .conocenos {
+        height: 16rem; /* Reducir la altura en móvil/tablet */
+    }
+
+    .texto-overlay {
+        text-align: center;
+        right: 5rem; /* Anulamos el right: 5rem; del desktop */
+        left: auto; /* Mueve el bloque completo a 2rem del borde izquierdo */
+        text-align: left; /* Alineamos el texto a la izquierda */
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15%; /* Aseguramos que no se extienda demasiado */
+    }
+
+    .texto-overlay h3 {
+        font-size: 1.5rem; 
+    }
+
+
+    .boton-contacto {
+        position: absolute;
+        bottom: 1.5rem; 
+        z-index: 100; 
+        margin-left: 1rem; 
+        padding: 0.5rem;
+        background-color: var(--color-6);
+        border-radius: 0.7rem; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        border: 2px solid transparent;
+        color: var(--color-2);
+        transition: all 0.5s ease;
+    }
+    .boton-contacto:hover{
+        background-color: transparent;
+        transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+        color: var(--color-6);
+        border: 2px solid var(--color-6);
+        cursor: pointer;
+    }
+    
+    
+}
+    
 
     /* --- DISPOSITIVO MOVIL --- */
     @media (max-width: 393px) {
-}
 }
