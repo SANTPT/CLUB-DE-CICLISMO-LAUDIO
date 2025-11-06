@@ -54,6 +54,7 @@ body {
 .carrusel-box img{
     width: 100%;
     border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 @keyframes carrusel  {
@@ -130,6 +131,7 @@ button p{
 .img-noticia{
   width: 30rem;
   height: auto;
+  
 }
 .redaccion{
     text-align: justify;
@@ -162,6 +164,7 @@ button p{
     margin-bottom: 4rem;
     border-radius: 0.5rem;
     margin-right: 5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 .section-lateral {
@@ -177,6 +180,7 @@ button p{
   border: 2px solid #e0e0e0;
   font-size: 1rem;
   padding-left: 1rem;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 .entradas-rec{
   h3{
