@@ -25,6 +25,7 @@ body {
     display: flex; 
     gap: 1.875rem ; 
     align-items: flex-start;
+    
 }
 
 
@@ -225,7 +226,7 @@ position: absolute;
 
 /* --- 4. MEDIA QUERIES (PARA RESPONSIVE) --- */
 /* --- TABLET --- */
-@media (max-width: 834px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .seccion-superior,
     .contenido-adicional {
         flex-direction: column;
@@ -238,6 +239,7 @@ position: absolute;
     .texto-container,
     .rueda-container {
         max-width: 100%;
+        width: 100%;
         margin-left: 0; /* Centrar o resetear márgenes de los contenedores */
         margin-right: 0;
     }
@@ -249,7 +251,9 @@ position: absolute;
     .imagen-container-carrusel-box {
         margin-top: 1%;
         overflow: hidden;
-        border-radius: 5rem; 
+        border-radius: 2rem; 
+        margin-left: auto; 
+        margin-right: auto;
     }
 
 
@@ -269,7 +273,8 @@ position: absolute;
 
     /* Ajustes para la Rueda (Sección Inferior) */
     .rueda-container {
-        /* Hacemos la rueda más pequeña en móvil y la centramos */
+        flex-basis: auto;
+        flex-shrink: 0;
         width: 20rem; 
         height: 20rem;
         margin: 0 auto; 
@@ -329,7 +334,127 @@ position: absolute;
     
 }
     
-
     /* --- DISPOSITIVO MOVIL --- */
-    @media (max-width: 393px) {
+    @media (min-width: 393px) and (max-width: 767px) {
+    .seccion-superior,
+    .contenido-adicional {
+        flex-direction: column;
+        gap: 1.25rem; 
+        margin-left: 1rem;
+        margin-right: 1rem; 
+    }
+    .contenido-adicional {
+        gap: 0.;
+    }
+
+    .imagen-container-carrusel-box,
+    .texto-container,
+    .rueda-container {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0; /* Centrar o resetear márgenes de los contenedores */
+        margin-right: 0;
+    }
+    .imagen-container-carrusel-box li img {
+        object-fit: contain;
+        border-radius: 2rem;
+        
+    }
+    
+    .imagen-container-carrusel-box {
+        margin-top: 0.5rem;
+        overflow: hidden;
+        border-radius: 2rem; 
+        margin-left: auto; 
+        margin-right: auto;
+        height: auto;
+        
+    }
+
+
+    /* Ajuste de Texto */
+    .texto-container {
+        max-width: 100%;
+        font-size: 1rem; 
+        padding: 0 1rem; 
+    }
+
+    .texto-container p, 
+    .texto-inferior {
+        font-size: 1.2rem; /* Reducir el tamaño de la fuente para mejor lectura */
+        padding: 0 1rem; /* Asegurar padding en párrafos si fuera necesario */
+    }
+
+    .texto-container h1{
+        font-size: 3rem;
+    }
+
+    /* Ajustes para la Rueda (Sección Inferior) */
+    .rueda-container {
+        flex-basis: auto;
+        flex-shrink: 0;
+        margin-bottom: 0rem; 
+        margin-top: 0.5rem;
+        width: 8rem; 
+        height: 8rem;
+        margin: 0 auto; 
+
+    }
+
+    .texto-inferior {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding-top: 0;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+    .conocenos {
+        height: 8rem;
+    }
+
+    .texto-overlay {
+        text-align: center;
+        right: 2rem; /* Anulamos el right: 5rem; del desktop */
+        left: auto; /* Mueve el bloque completo a 2rem del borde izquierdo */
+        text-align: left; /* Alineamos el texto a la izquierda */
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15%; /* Aseguramos que no se extienda demasiado */
+    }
+
+    .texto-overlay h3 {
+        font-size: 0.8rem; 
+    }
+
+
+    .boton-contacto {
+        position: absolute;
+        bottom: 1.5rem; 
+        z-index: 100; 
+        margin-left: 1rem; 
+        padding: 0.2rem;
+        background-color: var(--color-6);
+        border-radius: 0.7rem; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        border: 2px solid transparent;
+        color: var(--color-2);
+        transition: all 0.5s ease;
+    }
+
+    .boton-contacto p {
+        font-size: 0.7rem; /* ✨ Reducimos el tamaño de la fuente */
+        font-weight: bold;
+    }
+    .boton-contacto:hover{
+        background-color: transparent;
+        transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+        color: var(--color-6);
+        border: 2px solid var(--color-6);
+        cursor: pointer;
+    }
+    
+    
 }
+    
