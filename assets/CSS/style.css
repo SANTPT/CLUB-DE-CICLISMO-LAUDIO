@@ -39,7 +39,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  padding: 1rem 2rem;
+  /* padding: 1.5rem 2rem; */
 }
 /* Contenedor del logo + texto */
 .logo-container{
@@ -69,6 +69,8 @@ nav a {
   margin: 0 1rem;
   font-weight: bold;
   transition: color 0.3s;
+  padding: 1.5rem 1rem;
+  display: inline-block;
 }
 a {
   text-decoration: none;
@@ -101,6 +103,14 @@ nav a:hover {
 @media (max-width: 834px) {
   .menu-icon {
     display: flex;
+  }
+  .link-activo{
+    background-color: var(--color-2) !important;
+    transform: scale(1) !important;
+    border-radius: 0 !important;
+    box-shadow: 
+          0 8px 10px -6px rgba(0, 0, 0, 0) !important;
+
   }
   .menu-toggle:checked + .menu-icon + #nav-menu {
     display: flex;
@@ -141,6 +151,7 @@ nav a:hover {
     font-size: 1.3rem;
   }
   
+  
 }
 .title-page{
     font-family: var(--titulo);
@@ -151,7 +162,7 @@ nav a:hover {
 }
 
 footer{
-    background-color: var(--color-1);
+    background-color: var(--color-4);
 }
 
 .footer-container{
@@ -224,6 +235,19 @@ footer a:hover{
     color: var(--color-6);
 }
 
+.link-activo{
+  background-color: var(--color-6);
+  transform: scale(1.2);
+  border-radius: 0 0 0.7rem 0.7rem;
+  box-shadow: 
+        0 8px 10px -6px rgba(0, 0, 0, 0.6);
+  
+}
+
+.link-activo:hover{
+  color: var(--color-2);
+}
+
 
 @media screen and (max-width: 572px){
     .footer-container{
@@ -241,8 +265,4 @@ footer a:hover{
 }
 
 
-@media screen and (max-width: 572px){
-    .footer-section-3>div{
-        width: 80%;
-    }
-}
+
