@@ -80,6 +80,17 @@ nav a:hover {
   color: var(--color-6);
 }
 
+.link-activo{
+  background-color: var(--color-6);
+  transform: scale(1.2);
+  border-radius: 0 0 0.7rem 0.7rem;
+  box-shadow: 
+        0 8px 10px -6px rgba(0, 0, 0, 0.6);  
+}
+
+.link-activo:hover{
+  color: var(--color-2);
+}
 /* --------------------------------------------
    MENÚ HAMBURGUESA SOLO CON HTML + CSS
 -------------------------------------------- */
@@ -233,19 +244,6 @@ footer a:hover{
 
 .footer-section-3 i{
     color: var(--color-6);
-}
-
-.link-activo{
-  background-color: var(--color-6);
-  transform: scale(1.2);
-  border-radius: 0 0 0.7rem 0.7rem;
-  box-shadow: 
-        0 8px 10px -6px rgba(0, 0, 0, 0.6);
-  
-}
-
-.link-activo:hover{
-  color: var(--color-2);
 }
 
 
