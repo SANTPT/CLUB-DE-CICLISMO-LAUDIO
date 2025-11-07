@@ -19,7 +19,6 @@
         margin: 4rem  5rem;    
         text-align: justify;    
     }
-
     #cookies, #aviso, #privacidad{
         margin-bottom: 10rem;
 
@@ -41,6 +40,16 @@
                 margin: 1rem 2rem;
             }
     } 
+    @media screen and (max-width: 768px) {
+
+    .informacion-legal{
+      margin: 2rem;
+    }
+    #cookies h2, #aviso h2, #privacidad h2{
+        font-size: 2rem;
+        text-align: left;
+    }
+}
 </style>
 
 <body>
@@ -193,9 +202,9 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
             <section class="footer-section-3">
                 <div>
                     <ul>
-                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Cookies</a></li>
-                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Aviso Legal</a></li>
-                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Privacidad</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="legal.html#cookies">Cookies</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="legal.html#aviso">Aviso Legal</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="legal.html#privacidad">Privacidad</a></li>
                     </ul>
                 </div>
             </section>   
