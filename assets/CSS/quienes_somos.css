@@ -18,6 +18,7 @@
 
 body {
   font-family: var(--texto);
+
 }
 
 /* --- 1. SECCIÓN SUPERIOR (Imagen y Texto) --- */
@@ -25,6 +26,7 @@ body {
     display: flex; 
     gap: 1.875rem ; 
     align-items: flex-start;
+    padding: 1.5rem 2rem;
 }
 
 
@@ -35,7 +37,7 @@ body {
     margin-top: 1%;
     overflow: hidden;
     width: 50rem;
-    height: 32rem;
+    height: 40%;
     
 }
 .imagen-container-carrusel-box ul{
@@ -43,7 +45,7 @@ body {
     padding: 0;
     width: 500%; 
     height: 100%;
-    animation: carrusel 15s infinite linear;
+    animation: carrusel 12s infinite linear;
 }
 
 .imagen-container-carrusel-box li {
@@ -66,19 +68,19 @@ body {
     19.5% { margin-left: 0; }
 
     /* IMAGEN 2 */
-    21% { margin-left: -100%; }
+    19.6% { margin-left: -100%; }
     40% { margin-left: -100%; }
 
     /* IMAGEN 3 */
-    40.5% { margin-left: -200%; }
+    40.1% { margin-left: -200%; }
     60% { margin-left: -200%; }
 
     /* IMAGEN 4  */
-    61% { margin-left: -300%; }
+    60.1% { margin-left: -300%; }
     80.5% { margin-left: -300%; }
 
     /* IMAGEN 5 */
-    81.5% { margin-left: -400%; }
+    80.6% { margin-left: -400%; }
     100% { margin-left: -400%; }
 
 }
@@ -121,8 +123,8 @@ body {
     gap: 1.875rem;
     margin-top: 0rem; 
     align-items: flex-start;
-    margin-left: 10rem;
-    margin-right: 8rem;
+    margin-left: 10%;
+    margin-right: 6%;
 }
 
 /* RUEDA: Definición de tamaño y posición */
@@ -194,64 +196,266 @@ position: absolute;
 .boton-contacto {
     position: absolute;
     bottom: 3rem; 
-    left: 2rem; 
     z-index: 10; 
-
-    /* Estilos de apariencia del botón */
-    
     display: inline-block;
     padding: 1.2rem 1.2rem;
-    background-color: var(--color-5);    color: var(--color-2); 
+    background-color: var(--color-6);
     font-size: 1.542rem;
-    border-radius: 2rem; 
+    border-radius: 0.7rem; 
     text-decoration: none;
-    margin-left: 8rem;
-    transition:  transform 0.8s;
-    box-shadow: 
-              0 0 0.5rem var(--color-6),
-              0 0 1rem var(--color-6);
-    opacity: 90;
+    margin-left: 6rem;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    color: var(--color-2);
     
 }
 
 .boton-contacto:hover{
-  background: linear-gradient(135deg, #F8A002, #F2F2F2);
-  color: var(--color-5);
+  background-color: transparent;
   transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
-  box-shadow: 
-              0 0 0.5rem var(--color-5),
-              0 0 1rem var(--color-5);
+  color: var(--color-6);
+  border: 2px solid var(--color-6);
+  cursor: pointer;
 }
+
 .boton-contacto p{
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 /* --- 4. MEDIA QUERIES (PARA RESPONSIVE) --- */
-@media (max-width: 768px) {
+/* --- TABLET --- */
+@media (min-width: 600px) and (max-width: 1024px) {
     .seccion-superior,
     .contenido-adicional {
-        flex-direction: column; /* Apila las secciones verticalmente */
-        gap: 20px;
+        flex-direction: column;
+        gap: 1.25rem;;
+        margin-left: 1rem;
+        margin-right: 1rem; 
     }
 
-    .imagen-container,
+    .imagen-container-carrusel-box,
     .texto-container,
     .rueda-container {
-        max-width: 100%; /* Ocupan todo el ancho */
-        flex: none; /* Desactiva el flex-basis/flex-grow específico */
+        max-width: 100%;
         width: 100%;
+        margin-left: 0; /* Centrar o resetear márgenes de los contenedores */
+        margin-right: 0;
     }
-
-    .rueda-container {
-        /* Centrar la rueda si está apilada */
-        width: 100px; 
-        height: 100px;
-        margin: 0 auto;
-        margin-top: 10px;
+    .imagen-container-carrusel-box li img {
+        object-fit: contain;
+        border-radius: 2rem;
     }
     
-    .texto-inferior {
-        padding-top: 0;
+    .imagen-container-carrusel-box {
+        margin-top: 1%;
+        overflow: hidden;
+        border-radius: 2rem; 
+        margin-left: auto; 
+        margin-right: auto;
     }
+
+
+    /* Ajuste de Texto */
+    .texto-container {
+        max-width: 100%;
+        font-size: 1rem; 
+        padding: 0 1rem; /* Añadir un poco de padding para que el texto no toque los bordes */
+    }
+
+
+    .texto-container p, 
+    .texto-inferior {
+        font-size: 1.2rem; /* Reducir el tamaño de la fuente para mejor lectura */
+        padding: 0 1rem; /* Asegurar padding en párrafos si fuera necesario */
+    }
+
+    /* Ajustes para la Rueda (Sección Inferior) */
+    .rueda-container {
+        flex-basis: auto;
+        flex-shrink: 0;
+        width: 20rem; 
+        height: 20rem;
+        margin: 0 auto; 
+        margin-bottom: 0.5rem; 
+        margin-top: 0.5rem;
+    }
+    
+    
+    .texto-inferior {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+    .conocenos {
+        height: 16rem; /* Reducir la altura en móvil/tablet */
+    }
+
+    .texto-overlay {
+        text-align: center;
+        right: 5rem; /* Anulamos el right: 5rem; del desktop */
+        left: auto; /* Mueve el bloque completo a 2rem del borde izquierdo */
+        text-align: left; /* Alineamos el texto a la izquierda */
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15%; /* Aseguramos que no se extienda demasiado */
+    }
+
+    .texto-overlay h3 {
+        font-size: 1.5rem; 
+    }
+
+
+    .boton-contacto {
+        position: absolute;
+        bottom: 1.5rem; 
+        z-index: 100; 
+        margin-left: 1rem; 
+        padding: 0.5rem;
+        background-color: var(--color-6);
+        border-radius: 0.7rem; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        border: 2px solid transparent;
+        color: var(--color-2);
+        transition: all 0.5s ease;
+    }
+    .boton-contacto:hover{
+        background-color: transparent;
+        transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+        color: var(--color-6);
+        border: 2px solid var(--color-6);
+        cursor: pointer;
+    }
+    
+    
 }
+    
+    /* --- DISPOSITIVO MOVIL --- */
+    @media (min-width: 320px) and (max-width: 599px) {
+    .seccion-superior,
+    .contenido-adicional {
+        flex-direction: column;
+        gap: 1.25rem; 
+        margin-left: 1rem;
+        margin-right: 1rem; 
+    }
+    .contenido-adicional {
+        gap: 0.;
+    }
+
+    .imagen-container-carrusel-box,
+    .texto-container,
+    .rueda-container {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0; /* Centrar o resetear márgenes de los contenedores */
+        margin-right: 0;
+    }
+    .imagen-container-carrusel-box li img {
+        object-fit: contain;
+        border-radius: 2rem;
+        
+    }
+    
+    .imagen-container-carrusel-box {
+        margin-top: 0.5rem;
+        overflow: hidden;
+        border-radius: 2rem; 
+        margin-left: auto; 
+        margin-right: auto;
+        height: auto;
+        
+    }
+
+
+    /* Ajuste de Texto */
+    .texto-container {
+        max-width: 100%;
+        font-size: 1rem; 
+        padding: 0 1rem; 
+    }
+
+    .texto-container p, 
+    .texto-inferior {
+        font-size: 1.2rem; /* Reducir el tamaño de la fuente para mejor lectura */
+        padding: 0 1rem; /* Asegurar padding en párrafos si fuera necesario */
+    }
+
+    .texto-container h1{
+        font-size: 3rem;
+    }
+
+    /* Ajustes para la Rueda (Sección Inferior) */
+    .rueda-container {
+        flex-basis: auto;
+        flex-shrink: 0;
+        margin-bottom: 0rem; 
+        margin-top: 0.5rem;
+        width: 8rem; 
+        height: 8rem;
+        margin: 0 auto; 
+
+    }
+
+    .texto-inferior {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding-top: 0;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+    .conocenos {
+        height: 8rem;
+    }
+
+    .texto-overlay {
+        text-align: center;
+        right: 2rem; /* Anulamos el right: 5rem; del desktop */
+        left: auto; /* Mueve el bloque completo a 2rem del borde izquierdo */
+        text-align: left; /* Alineamos el texto a la izquierda */
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15%; /* Aseguramos que no se extienda demasiado */
+    }
+
+    .texto-overlay h3 {
+        font-size: 0.8rem; 
+    }
+
+
+    .boton-contacto {
+        position: absolute;
+        bottom: 1.5rem; 
+        z-index: 100; 
+        margin-left: 1rem; 
+        padding: 0.2rem;
+        background-color: var(--color-6);
+        border-radius: 0.7rem; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        border: 2px solid transparent;
+        color: var(--color-2);
+        transition: all 0.5s ease;
+    }
+
+    .boton-contacto p {
+        font-size: 0.7rem; /* ✨ Reducimos el tamaño de la fuente */
+        font-weight: bold;
+    }
+    .boton-contacto:hover{
+        background-color: transparent;
+        transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+        color: var(--color-6);
+        border: 2px solid var(--color-6);
+        cursor: pointer;
+    }
+    
+    
+}
+    
