@@ -1,12 +1,24 @@
 :root {
-  font-size: 1.2rem;
+  font-size: 1rem;
   --accent: #333;
   --shadow: 0 6px 16px rgba(0,0,0,0.08);
   --gap: 0.5rem;
   --img-col-w: 25%;
   --img-max-h: 210px;
+  --color-1: #000000;
+  --color-2: #FFFFFF;
+  --color-3: #f2f2f2;
+  --color-4: #212512;
+  --color-5: #358637;
+  --color-6: #F8A002;
+  --titulo: 'Inspiration', cursive;
+  --texto: "Geologica", sans-serif;
+  --nav: 'Jaini', sans-serif;
 }
 
+/* -------------------------------------------------------
+   RESETEO BÁSICO
+--------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,30 +26,105 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--texto);
   background: #f4f4f4;
   color: #111;
 }
 
-/* Ajustes individuales para imágenes en la galería (si los quieres) */
-.galeria img:nth-child(2) {
-  position: relative;
-  left: -300px;
-}
-.galeria img:nth-child(4) {
-  position: relative;
-  left: -300px;
-  top: 10px;
-}
-
+/* -------------------------------------------------------
+   CABECERA (LOGO + NAV)
+--------------------------------------------------------*/
 header {
-  background: var(--accent);
-  color: #fff;
-  text-align: center;
-  padding: 1.2rem 0;
-  font-size: 1.8rem;
+  background: var(--color-6); /* naranja arriba */
 }
 
+.nav-wrap {
+  background: var(--color-5); /* verde debajo del naranja */
+  width: 100%;
+}
+
+/* Contenedor interno del nav */
+.nav-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo izq, nav der */
+  padding: 0.8rem 2rem;
+  position: relative;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-container img {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-container h2 {
+  font-family: var(--titulo);
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Navegación principal */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* menú a la derecha */
+  gap: 2.2rem;
+}
+
+.main-nav a {
+  font-family: var(--nav);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 1.3rem 1rem;
+}
+
+/* Hover */
+.main-nav a:hover {
+  color: var(--color-6);
+}
+
+/* Enlace activo */
+.main-nav a.link-activo {
+  background: var(--color-6);
+  color: #000;
+  border-radius: 0 0 0.7rem 0.7rem;
+  box-shadow: 0 8px 10px -6px rgba(0,0,0,0.6);
+  transform: scale(1.2);
+}
+
+.main-nav a.link-activo:hover {
+  color: #000;
+}
+
+/* -------------------------------------------------------
+   CONTENIDO PRINCIPAL
+--------------------------------------------------------*/
 .content-wrapper {
   display: flex;
   gap: var(--gap);
@@ -85,6 +172,9 @@ p {
   margin-bottom: 1rem;
 }
 
+/* -------------------------------------------------------
+   GALERÍA DE IMÁGENES
+--------------------------------------------------------*/
 .galeria {
   width: var(--img-col-w);
   display: flex;
@@ -110,6 +200,20 @@ p {
   box-shadow: 0 12px 34px rgba(0,0,0,0.16);
 }
 
+/* Pequeños ajustes opcionales */
+.galeria img:nth-child(2) {
+  position: relative;
+  left: -300px;
+}
+.galeria img:nth-child(4) {
+  position: relative;
+  left: -300px;
+  top: 10px;
+}
+
+/* -------------------------------------------------------
+   INSCRIPCIÓN
+--------------------------------------------------------*/
 .inscripcion-box {
   background: #fff;
   margin: 3rem auto;
@@ -182,7 +286,83 @@ textarea {
   opacity: 0.95;
 }
 
-/* Responsive tablet */
+/* -------------------------------------------------------
+   FOOTER
+--------------------------------------------------------*/
+footer {
+  background-color: var(--color-4);
+  color: var(--color-2);
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.footer-section-1 .title-page {
+  font-family: var(--titulo);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-socials i {
+  font-size: 1.5rem;
+  color: var(--color-2);
+}
+
+.footer-section-3 {
+  width: 50%;
+  text-align: right;
+}
+
+.footer-section-3 ul {
+  list-style: none;
+}
+
+.footer-section-3 li {
+  line-height: 2rem;
+}
+
+.footer-section-3 a {
+  color: var(--color-2);
+  text-decoration: none;
+}
+
+.footer-section-3 a:hover {
+  color: var(--color-6);
+}
+
+.footer-bottom {
+  background-color: var(--color-4);
+  color: var(--color-2);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------*/
 @media (max-width: 900px) {
   .content-wrapper {
     flex-direction: column;
@@ -212,13 +392,46 @@ textarea {
     max-width: 95%;
     padding: 1.2rem;
   }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + #main-nav {
+    display: flex;
+  }
+
+  .main-nav a {
+    color: #000;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-nav a.link-activo {
+    background: #F8A002;
+    color: #000;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
 }
 
-/* Responsive móvil */
 @media (max-width: 600px) {
   header {
     font-size: 1.4rem;
-    padding: 0.9rem 0;
   }
 
   .content-wrapper {
@@ -244,4 +457,30 @@ textarea {
     padding: 1rem;
     margin: 1.2rem;
   }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section-1, .footer-section-3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+.main-nav a:focus { 
+  outline: 3px solid rgba(248,160,2,0.25); 
+  outline-offset: 3px; 
+}
+
+.logo-container { 
+  z-index: 90; 
+}
+
+.nav-inner { 
+  z-index: 50; 
+}
+
+.main-nav { 
+  z-index: 60; 
 }
