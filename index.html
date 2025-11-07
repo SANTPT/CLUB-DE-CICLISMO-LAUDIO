@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/inicio.css">
-    <title>Club Ciclismo ZikloLaudio</title>
+    <title>Club Ciclista ZikloLaudio</title>
 </head>
 
 <body>
@@ -78,7 +78,8 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
                 <input class="buscar" type="text" name="buscar" placeholder="Buscar..">
                 <div class="entradas-rec">
                     <h3>Entradas recientes</h3>
-                    <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p>
+                    <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p> <br>
+                    <p>Salida hasta Titulcia- <br>Domingo 16 de Noviembre 2025</p>
                 </div>
 
                 <div class="archivos"> 
@@ -102,12 +103,12 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
 
                 <div class="categorias">
                     <h3>Categorías</h3>
-                    <select name="categoria" class="elegir">
+                    <select id="categoria" name="categorias" class="elegir">
                         <option  value="">Elegir la categoría</option>
                         <option value="carreras">Carreras</option>
                         <option value="eventos">Eventos</option>
-                        <option value="rutas">Rutas</option>
-                        <option value="cursos">Cursos</option>
+                        <option value="rutas.html">Rutas</option>
+                        <option value="cursos.html">Cursos</a></option>
                     </select>
                 </div>
             </div>
@@ -159,6 +160,11 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     </footer>
 
 
-    
+    <script>
+  const select = document.getElementById('categoria');
+  select.addEventListener('change', () => {
+    if (select.value) window.location.href = select.value;
+  });
+</script>
 </body>
 </html>
