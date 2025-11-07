@@ -195,13 +195,13 @@ button p{
 .archivos{
   margin-top: 5rem;
   h3{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   }
 }
 .categorias{
   margin-top: 5rem;
   h3{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   }
 }
 .elegir{
@@ -210,11 +210,6 @@ button p{
   color:#4b4a4a;
   font-size: 1.1rem;
  }
-
- .color-caja{
-  background: #358637;
- }
-
 
 /* ----------------------------------------------------
   RESPONSIVE: TELÉFONOS Y TABLETS PEQUEÑAS
