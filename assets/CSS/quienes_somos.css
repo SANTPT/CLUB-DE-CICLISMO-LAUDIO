@@ -1,36 +1,104 @@
-/* --- 1. Estilos Generales --- */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
+*{
     padding: 0;
-    font-size: 100%; 
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.contenedor-principal {
-    max-width: 75rem; /* 1200px / 16 = 75rem */
-    margin: 5rem auto; 
-    padding: 0 1.25rem; 
+:root{
+  --color-1: #000000;
+  --color-2: #FFFFFF;
+  --color-3: #f2f2f2;
+  --color-4: #212512;
+  --color-5: #358637;
+  --color-6: #F8A002;
+  --titulo:  'Inspiration', cursive;
+  --texto:  "Geologica", sans-serif;
+  --nav:  'Jaini', sans-serif;
 }
 
+body {
+  font-family: var(--texto);
+}
+
+/* --- 1. SECCIÓN SUPERIOR (Imagen y Texto) --- */
 .seccion-superior {
     display: flex; 
-    gap: 1.875rem; /* Espacio entre columnas */
-    align-items: stretch; 
+    gap: 1.875rem ; 
+    align-items: flex-start;
 }
 
 
-.imagen-container {
-    flex: 3;
-    max-width: 60%; 
+.imagen-container-carrusel-box{
+    max-width: 45%; 
     flex-shrink: 0;
+    margin-left: 10rem;
+    margin-top: 1%;
+    overflow: hidden;
+    width: 50rem;
+    height: 32rem;
+    
+}
+.imagen-container-carrusel-box ul{
+    display: flex;
+    padding: 0;
+    width: 500%; 
+    height: 100%;
+    animation: carrusel 15s infinite linear;
 }
 
-/* El texto se estira para igualar la altura del contenedor */
+.imagen-container-carrusel-box li {
+    width: 20%; 
+    list-style: none;
+    flex-shrink: 0; 
+    position: relative;
+}
+
+.imagen-container-carrusel-box li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 2rem;
+}
+
+@keyframes carrusel {
+    /* IMAGEN 1 (Posición: 0%) - Pausa hasta el 19% */
+    0% { margin-left: 0; }
+    19.5% { margin-left: 0; }
+
+    /* IMAGEN 2 */
+    21% { margin-left: -100%; }
+    40% { margin-left: -100%; }
+
+    /* IMAGEN 3 */
+    40.5% { margin-left: -200%; }
+    60% { margin-left: -200%; }
+
+    /* IMAGEN 4  */
+    61% { margin-left: -300%; }
+    80.5% { margin-left: -300%; }
+
+    /* IMAGEN 5 */
+    81.5% { margin-left: -400%; }
+    100% { margin-left: -400%; }
+
+}
+
 .texto-container {
-    flex: 2;
+    flex: 2; 
     max-width: 40%;
     font-size: 1rem; 
+    margin-top: 0.6%;
+    text-align: justify;
+
+}
+
+.texto-container h1{
+    text-align: center;
+    font-family: var(--titulo);
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 
@@ -40,31 +108,150 @@ body {
     display: block;
 }
 
-/* Título: Hemos quitado el desplazamiento, si quieres conservarlo, revierte esta regla */
-.texto-container h2 {
-    font-size: 3.5rem; 
-    margin-top: 0;
-    margin-bottom: 1.25rem; 
+.texto-container p {
+    line-height: 1.6;
+    font-size: 1.542rem;
+    margin-top: 1%;
 }
 
-/* --- 3. Sección Inferior (Rueda y Texto) --- */
+/* --- 2. SECCIÓN INFERIOR (Rueda y Texto) --- */
+
 .contenido-adicional {
     display: flex;
     gap: 1.875rem;
-    margin-top: 1.25rem; 
+    margin-top: 0rem; 
     align-items: flex-start;
-
+    margin-left: 10rem;
+    margin-right: 8rem;
 }
 
+/* RUEDA: Definición de tamaño y posición */
 .rueda-container {
-    flex-basis: 9.375rem; 
+    flex-basis: 20.75rem;
     flex-shrink: 0;
-    width: 9.375rem;
-    height: 9.375rem;
-    margin-top: 1.625rem;
+    width: 20.75rem;
+    height: 20.75rem;
+}
+
+.rueda-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
 }
 
 .texto-inferior {
+    line-height: 1.6;
+    margin-top: 1.5rem;
     flex-grow: 1;
+    text-align: justify;
+    font-size: 1.542rem;
     padding-top: 0.3125rem;
+    
+}
+
+/* --- 3. IMAGEN 'CONOCENOS' --- */
+.conocenos {
+    margin: 2.5rem 0;
+    height: 30rem; 
+    overflow: hidden;
+    position: relative;
+}
+
+.conocenos img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+    opacity: 0.5;
+}
+
+.texto-overlay{
+position: absolute;
+    top: 50%;
+    right: 5rem; 
+    transform: translateY(-50%);
+    text-align: right;
+    color: var(--color-2); /* Blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+.texto-overlay h3 {
+    font-size: 3.5rem; 
+    line-height: 1.1;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 
+    0.0625rem 0.0625rem 0 var(--color-1),  
+        -0.0625rem 0.0625rem 0 var(--color-1), 
+        0.0625rem -0.0625rem 0 var(--color-1), 
+        -0.0625rem -0.0625rem 0 var(--color-1),
+        0 0.25rem 0.5rem rgba(0, 0, 0, 0.6);
+        
+}
+
+ /*3. Estilos para que el botón se vea y se posicione */
+.boton-contacto {
+    position: absolute;
+    bottom: 3rem; 
+    left: 2rem; 
+    z-index: 10; 
+
+    /* Estilos de apariencia del botón */
+    
+    display: inline-block;
+    padding: 1.2rem 1.2rem;
+    background-color: var(--color-5);    color: var(--color-2); 
+    font-size: 1.542rem;
+    border-radius: 2rem; 
+    text-decoration: none;
+    margin-left: 8rem;
+    transition:  transform 0.8s;
+    box-shadow: 
+              0 0 0.5rem var(--color-6),
+              0 0 1rem var(--color-6);
+    opacity: 90;
+    
+}
+
+.boton-contacto:hover{
+  background: linear-gradient(135deg, #F8A002, #F2F2F2);
+  color: var(--color-5);
+  transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+  box-shadow: 
+              0 0 0.5rem var(--color-5),
+              0 0 1rem var(--color-5);
+}
+.boton-contacto p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* --- 4. MEDIA QUERIES (PARA RESPONSIVE) --- */
+@media (max-width: 768px) {
+    .seccion-superior,
+    .contenido-adicional {
+        flex-direction: column; /* Apila las secciones verticalmente */
+        gap: 20px;
+    }
+
+    .imagen-container,
+    .texto-container,
+    .rueda-container {
+        max-width: 100%; /* Ocupan todo el ancho */
+        flex: none; /* Desactiva el flex-basis/flex-grow específico */
+        width: 100%;
+    }
+
+    .rueda-container {
+        /* Centrar la rueda si está apilada */
+        width: 100px; 
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    
+    .texto-inferior {
+        padding-top: 0;
+    }
 }

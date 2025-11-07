@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --color-1: #000000;
+  --color-2: #FFFFFF;
+  --color-3: #f2f2f2;
+  --color-4: #212512;
+  --color-5: #358637;
+  --color-6: #F8A002;
+  --titulo:  'Inspiration', cursive;
+  --texto:  "Geologica", sans-serif;
+  --nav:  'Jaini', sans-serif;
+}
+
+body {
+  font-family: var(--texto);
+}
+/* -----------------------------------------------------------
+ EL CARRUSEL DE NUESTRA PAGINA INICIO
+-------------------------------------------------------------*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    height: 100%;
+}
+
+.bienvenido{
+    grid-column: 1 / span 3;    
+}
+.carrusel-box{
+    width: 100%;
+    max-width: 1280px;
+    height: 60%;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.carrusel-box ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: carrusel 20s infinite linear;
+}
+.carrusel-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.carrusel-box img{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+@keyframes carrusel  {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+/* -----------------------------------------------------------
+          SECTION BIENVENIDO + FRASE + BOTON
+-------------------------------------------------------------*/
+h1 {
+  font-family: var(--titulo);
+  font-size: 5rem;
+  margin-top: -0.5rem;
+}
+.bloque-bienvenido h4 {
+  font-family: var(--texto);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  margin-top: -0.5rem;
+}
+
+button{
+    padding: .7rem 1.2rem;
+    background-color: var(--color-5);   
+    color: var(--color-2);
+    border-radius: 2rem;
+    transition:  transform 0.8s;
+    box-shadow: 
+              0 0 0.5rem var(--color-6),
+              0 0 1rem var(--color-6);
+}
+button:hover{
+  background: linear-gradient(135deg, #F8A002, #F2F2F2);
+  color: var(--color-5);
+  transform: perspective(500px) translate3d(0.2rem, -0.5rem, 0.8rem);
+  box-shadow: 
+              0 0 0.5rem var(--color-5),
+              0 0 1rem var(--color-5);    
+}
+button p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* -----------------------------------------------------------
+            SECTION DE NOTICIAS
+-------------------------------------------------------------*/
+.noticias{
+    background-color: var(--color-2);
+    grid-area: 2 / 1 / 4/ 3;
+    margin-top: -5rem;
+}
+.noticias h2{
+  margin-right: 20rem;
+  font-size: 2rem;  
+}
+
+.noticia{
+  display: flex;
+  align-items: center;
+  margin-left: 4rem;
+}
+.img-cortizo, .redaccion{
+    flex: 0 1 40rem; /* columnas responsivas */
+}
+.img-noticia{
+  width: 30rem;
+  height: auto;
+}
+.redaccion{
+    text-align: justify;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+.info{
+  color: var(--color-5);
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+.sombrear{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-4);
+}
+.fecha{
+  font-size: 1rem;
+  color: var(--color-4);
+}
+/* -----------------------------------------------------------
+            SECTION ASIDE "barra lateral"
+-------------------------------------------------------------*/
+.barra-lateral{
+    grid-area: 2 / 3 / 4 / 4;
+    border: 2px solid #e0e0e0;
+    padding-top: 5rem; 
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+    margin-right: 5rem;
+}
+
+.section-lateral {
+    display: flex;
+    flex-direction: column; /* coloca los h3 en columna */
+    align-items: center;   /* centra horizontalmente todo el contenido */
+    gap: 4rem;
+    font-size: 1.3rem;
+}
+ .buscar{
+  max-width: 12rem;
+  height: 2.7rem;
+  border: 2px solid #e0e0e0;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+.entradas-rec{
+  h3{
+    margin-bottom: 0.5rem;
+  }
+  p{
+    color:#4b4a4a;
+    font-size: 1.2rem;
+  }
+}
+
+.archivos{
+  margin-top: 5rem;
+  h3{
+  margin-bottom: 2rem;
+  }
+}
+.categorias{
+  margin-top: 5rem;
+  h3{
+  margin-bottom: 2rem;
+  }
+}
+.elegir{
+  max-width: 15rem;
+  height: 2.7rem;
+  color:#4b4a4a;
+  font-size: 1.1rem;
+ }
+
+ .color-caja{
+  background: #358637;
+ }
+
+
+/* ----------------------------------------------------
+  RESPONSIVE: TELÉFONOS Y TABLETS PEQUEÑAS
+--------------------------------------------------------*/
+@media (max-width: 834px) {
+ 
+}

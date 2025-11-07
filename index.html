@@ -3,39 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
+        <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/051bfd6557.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="assets/CSS/style.css">
-    <title>Zik</title>
+    <link rel="stylesheet" href="assets/CSS/inicio.css">
+    <title>Club Ciclismo ZikloLaudio</title>
 </head>
+
 <body>
+<!-- ------------------------------------------------------------
+AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
+----------------------------------------------------------------->
     <header>
-        <img src="" alt="">
-        <h3></h3>
+        <div class="header-top"></div>
+        <div class="header-bottom">
+            <div class="logo-container">
+            <img src="assets/img/logo.webp" alt="Nuestro logo del club ciclismo ZikloLaudio">
+            <h2>ZikloLaudio</h2>
+        </div>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">☰</label>
-        <nav id="nav-menu">
-            <a href="">Inicio</a>
-            <a href="">Quienes somos</a>
-            <a href="">Rutas</a>
-            <a href="">Cursos</a>
-            <a href="">Contacto</a>           
-        </nav>
-        
+            
+            <nav id="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="quienes_somos.html">Quienes somos</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="">Cursos</a>
+                <a href="Contacto.html">Contacto</a>           
+            </nav>
+        </div>
     </header>
+<!-- ------------------------------------------------------------
+ DESDE AQUI COMIENZA MI CUERPO DE PAGINA
+----------------------------------------------------------------->
+    <main class="grid-container">
+        <section class="bienvenido">
+            <div class="carrusel-box">
+                <ul>
+                    <li><img src="assets/img/1.png" alt=""></li>
+                    <li><img src="assets/img/2.png" alt=""></li>
+                    <li><img src="assets/img/3.png" alt=""></li>
+                    <li><img src="assets/img/4.png" alt=""></li>                    
+                    <li></li>
+                </ul>            </div>            
+            <article class="bloque-bienvenido">
+                <h1>Bienvenido a ZikloLaudio</h1>
+                <h4>Tu lugar para rutas, consejos y pasión por el ciclismo.</h4>
+                <button><a href="rutas.html"><p>Explora rutas</p></a> </button>
+            </article>
+        </section>
 
-    <main>
+<!-- BLOQUE NOTICIAS -->
+        <section class="noticias">
+            <h2>Noticias</h2>
+            <article class="noticia"> 
+                <img class="img-noticia" src="assets/img/Equipo-cortizo.png" alt="">
+                <p class="redaccion"> <span class="sombrear">🏆Equipo Cortizo y Martín Rey:líderes nacionales sub-23</span> <br>El Equipo Cortizo, dirigido por Marcos Serrano, cerró la temporada como el mejor conjunto sub-23 del país, acumulando 26 victorias en un año excepcional. <span class="info"><a href="https://equipocortizo.com/el-equipo-cortizo-y-martin-rey-los-mejores-de-la-temporada-en-el-ranking-nacional-sub-23/" target="_blank">+ info</a></span></p>
+            </article>
 
+            <article class="noticia"> 
+                <img  class="img-noticia" src="assets/img/Jonathan.png" alt="">
+                <p class="redaccion"><span class="sombrear">Jonathan Lastra reforzará el Euskaltel-Euskadi en 2026</span> <br>El ciclista bilbaíno Jonathan Lastra (1993) vestirá el maillot  naranja del Euskaltel-Euskadi en la temporada 2026, tras su paso por el  WorldTour con el Cofidis. Con su fichaje, la... <span class="fecha">(30/10/2025)</span>  <span class="info"><a href="https://www.esciclismo.com/actualidad/carretera/88614.html" target="_blank">+ info</a></span></p>
+            </article>
+        </section>
 
+<!-- BLOQUE ASIDE "barra lateral" -->
+        <aside class="barra-lateral">
+            <div class="section-lateral">
+                <input class="buscar" type="text" name="buscar" placeholder="Buscar..">
+                <div class="entradas-rec">
+                    <h3>Entradas recientes</h3>
+                    <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p>
+                </div>
+
+                <div class="archivos"> 
+                    <h3>Archivos</h3>
+                    <select name="mes" class="elegir">
+                        <option value="">Elegir el mes</option>
+                            <option value="enero">Enero 2025</option>
+                            <option value="febrero">Febrero 2025</option>
+                            <option value="marzo">Marzo 2025</option>
+                            <option value="abril">Abril 2025</option>
+                            <option value="mayo">Mayo 2025</option>
+                            <option value="junio">Junio 2025</option>
+                            <option value="julio">Julio 2025</option>
+                            <option value="agosto">Agosto 2025</option>
+                            <option value="septiembre">Septiembre 2025</option>
+                            <option value="octubre">Octubre 2025</option>
+                            <option value="noviembre">Noviembre 2025</option>
+                            <option value="diciembre">Diciembre 2025</option>
+                    </select>
+                </div>
+
+                <div class="categorias">
+                    <h3>Categorías</h3>
+                    <select name="categoria" class="elegir">
+                        <option  value="">Elegir la categoría</option>
+                        <option value="carreras">Carreras</option>
+                        <option value="eventos">Eventos</option>
+                        <option value="rutas">Rutas</option>
+                        <option value="cursos">Cursos</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
     </main>
 
-
-    <aside>
-
-
-    </aside>
-
-
-    <footer>
-
+<!-- -------------------------------------------------------------------------------------------
+ DESDE AQUI COMIENZA EL FOOTER "Realizado por el compañero Kevin"
+-------------------------------------------------------------------------------------------------->
+   <footer>
+        <div class="footer-container">
+            <section class="footer-section-1">
+                <div>
+                    <h4 class="title-page">ZikoLaudio</h4>
+                </div>
+                <div class="footer-socials">
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="footer-section-3">
+                <div>
+                    <ul>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Cookies</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Aviso Legal</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Privacidad</a></li>
+                    </ul>
+                </div>
+            </section>   
+        </div>
+        <section class="footer-section-2">
+                <p>Copyright 2025 | Club Ciclista ZikloLaudio</p>
+                <br>
+        </section>
+        
     </footer>
 
 

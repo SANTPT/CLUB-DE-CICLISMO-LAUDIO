@@ -2,7 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
+      <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/051bfd6557.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/CSS/quienes_somos.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
     <title>Ziclo Laudio - Quiénes Somos</title>
@@ -15,15 +23,41 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <header>
+        <div class="header-top"></div>
+        <div class="header-bottom">
+            <div class="logo-container">
+            <img src="assets/img/logo.webp" alt="Nuestro logo del club ciclismo ZikloLaudio">
+            <h2>ZikloLaudio</h2>
+        </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            
+            <nav id="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="quienes_somos.html">Quienes somos</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="Contacto.html">Contacto</a>           
+            </nav>
+        </div>
+    </header>
     <div class="contenedor-principal">
         
         <div class="seccion-superior">
-            <div class="imagen-container">
-                <img src="assets/img/Quienes_somos.jpg" alt="Grupo de ciclistas en ruta" class="imagen-ciclistas">
+            <div class="imagen-container-carrusel-box">
+                <ul>
+                <li><img src="assets/img/Quienes_somos.jpg" alt="Grupo de ciclistas en ruta"></li>
+                <li><img src="assets/img/Quienes_somos_1.jpg" alt="Paisaje antigua catedral Laudio" ></li>
+                <li><img src="assets/img/Quienes_somos_2.jpg" alt="Ruta verde" ></li>
+                <li><img src="assets/img/Quienes_somos_3.jpg" alt="ciclistas en ruta"></li>
+                <li><img src="assets/img/Quienes_somos_4.jpg" alt="paronamica" ></li> 
+                <li><img src="assets/img/Quienes_somos.jpg" alt="Grupo de ciclistas en ruta"></li>
+                </ul>
             </div>
             
             <div class="texto-container">
-                <h2>¿Quiénes somos?</h2>
+                <h1>¿Quiénes somos?</h1>
                  <p>En Ciclo Laudio compartimos una misma pasión: el ciclismo en todas sus formas. Somos un club de ciclismo con sede en Llodio (Álava), nacido del entusiasmo de un grupo de amigos que decidió convertir su afición en una comunidad abierta, activa y formativa para todos los niveles y edades.</p>
                  <p>Nuestro objetivo es promover el ciclismo como estilo de vida, fomentando el compañerismo, la salud y el respeto por la naturaleza. En Ciclo Laudio creemos que cada pedalada cuenta, ya sea entrenando en casa, aprendiendo las bases del ciclismo, o explorando las carreteras y montañas del País Vasco.</p>
             </div>
@@ -43,12 +77,22 @@
 
     <div class="conocenos">
         <img src="assets/img/COnocenos_Quienes_somos.jpg">
+        <div class="texto-overlay">
+                <h3>
+                    Tu próxima<br>
+                    aventura te<br>
+                    espera. ¡Únete<br>
+                    al club!
+                </h3>
+            </div>
+
+            <a href="Contacto.html" class="boton-contacto">
+               <p> contáctanos </p>
+            </a>
+        </div>
     </div>
 
-
-</body>
-
-<footer>
+    <footer>
         <div class="footer-container">
             <section class="footer-section-1">
                 <div>
@@ -56,19 +100,19 @@
                 </div>
                 <div class="footer-socials">
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://x.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                     <div>
-                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
             </section>
@@ -88,7 +132,7 @@
         </section>
         
     </footer>
-    
+
+
 </body>
-</html>
 </html>.
