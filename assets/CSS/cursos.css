@@ -1,0 +1,247 @@
+:root {
+  font-size: 1.2rem;
+  --accent: #333;
+  --shadow: 0 6px 16px rgba(0,0,0,0.08);
+  --gap: 0.5rem;
+  --img-col-w: 25%;
+  --img-max-h: 210px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  color: #111;
+}
+
+/* Ajustes individuales para imágenes en la galería (si los quieres) */
+.galeria img:nth-child(2) {
+  position: relative;
+  left: -300px;
+}
+.galeria img:nth-child(4) {
+  position: relative;
+  left: -300px;
+  top: 10px;
+}
+
+header {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1.8rem;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: var(--gap);
+  align-items: stretch;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.texto {
+  width: 76%;
+  padding-right: 0.5rem;
+  padding-left: 0;
+  text-align: left;
+}
+
+.descripcion {
+  text-align: left;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.descripcion h2 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion p {
+  text-align: left;
+  margin-left: 0;
+  line-height: 1.6;
+}
+
+h2 {
+  color: var(--accent);
+  margin-top: 1rem;
+}
+
+ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.galeria {
+  width: var(--img-col-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.16);
+}
+
+.inscripcion-box {
+  background: #fff;
+  margin: 3rem auto;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  max-width: 1000px;
+  box-shadow: var(--shadow);
+}
+
+.titulo-inscripcion {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-grid .full {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.45rem;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 4rem;
+  resize: vertical;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.45rem;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  opacity: 0.95;
+}
+
+/* Responsive tablet */
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 1.2rem;
+  }
+
+  .texto {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .galeria {
+    width: 100%;
+    flex-direction: row;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    overflow-x: auto;
+  }
+
+  .galeria img {
+    width: 20%;
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  .inscripcion-box {
+    max-width: 95%;
+    padding: 1.2rem;
+  }
+}
+
+/* Responsive móvil */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.4rem;
+    padding: 0.9rem 0;
+  }
+
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .galeria {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 0.6rem;
+  }
+
+  .galeria img {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inscripcion-box {
+    padding: 1rem;
+    margin: 1.2rem;
+  }
+}
