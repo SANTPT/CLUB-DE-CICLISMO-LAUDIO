@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciación al ciclismo</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
+
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/051bfd6557.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos principales (mantén el orden) -->
+  <link rel="stylesheet" href="assets/CSS/rutas.css">
+  <link rel="stylesheet" href="assets/CSS/style.css">
+  <link rel="stylesheet" href="assets/CSS/cursos.css">
+</head>
+
+<body>
+
+  <!-- NAV / HEADER copiado del otro código -->
+  <header>
+    <div class="header-top"></div>
+    <div class="header-bottom">
+      <div class="logo-container">
+        <img src="assets/img/logo.webp" alt="Nuestro logo del club ciclismo ZikloLaudio">
+        <h2>ZikloLaudio</h2>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+
+      <nav id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="quienes_somos.html">Quienes somos</a>
+        <a href="rutas.html">Rutas</a>
+        <a href="cursos.html" class="link-activo">Cursos</a>
+        <a href="Contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <section class="texto">
+
+      <div class="descripcion">
+        <h2>Descripción</h2>
+        <p>
+          El curso de Iniciación al Ciclismo está pensado para todas aquellas personas que quieren
+          aprender desde cero o recuperar la confianza sobre la bici. A través de clases prácticas
+          y dinámicas, enseñamos las bases del ciclismo: equilibrio, manejo, seguridad y
+          mantenimiento básico, para que cada participante pueda disfrutar pedaleando con confianza.
+        </p>
+
+        <h2>Objetivos del curso</h2>
+        <ul>
+          <li>Aprender a montar y manejar la bicicleta de forma segura.</li>
+          <li>Conocer las partes principales de la bici y su correcto ajuste.</li>
+          <li>Mejorar la técnica de frenado, cambio de marchas y equilibrio.</li>
+          <li>Familiarizarse con las normas de seguridad vial y conducción en grupo.</li>
+          <li>Realizar un mantenimiento básico de la bicicleta.</li>
+        </ul>
+
+        <h2>Contenidos</h2>
+        <ul>
+          <li>Ajuste de la bicicleta y control de estabilidad.</li>
+          <li>Técnicas de pedaleo y frenado.</li>
+          <li>Uso de los cambios en diferentes terrenos.</li>
+          <li>Señales y normas básicas de circulación.</li>
+          <li>Mecánica básica: pinchazos, cadena, frenos.</li>
+          <li>Prácticas en circuito cerrado y rutas cortas guiadas.</li>
+        </ul>
+
+        <h2>Duración y formato</h2>
+        <ul>
+          <li>Duración: 6 sesiones de 1 hora y media.</li>
+          <li>Modalidad: Teórico-práctica (80 % práctica / 20 % teoría).</li>
+          <li>Lugar: Zona segura del municipio de Llodio y rutas sencillas cercanas.</li>
+          <li>Fechas: Consultar calendario de próximas convocatorias.</li>
+        </ul>
+
+        <h2>A quién va dirigido</h2>
+        <ul>
+          <li>Niños y niñas desde 8 años.</li>
+          <li>Adultos principiantes o que retoman el ciclismo.</li>
+          <li>Familias que quieren aprender y disfrutar juntas sobre la bici.</li>
+        </ul>
+
+        <h2>Material necesario</h2>
+        <ul>
+          <li>Bicicleta en buen estado.</li>
+          <li>Casco (obligatorio).</li>
+          <li>Ropa cómoda y calzado deportivo.</li>
+          <li>Botella de agua y guantes recomendados.</li>
+        </ul>
+
+        <h2>Precio</h2>
+        <ul>
+          <li>Socios: 20 €</li>
+          <li>No socios: 30 €</li>
+        </ul>
+
+        <p>(Incluye seguro y certificado de participación)</p>
+      </div>
+    </section>
+
+    <aside class="galeria" aria-label="Galería de imágenes del curso">
+      <img src="assets/img/ninosbicleta.jpg" alt="Niños en bicicleta">
+      <img src="assets/img/familiabicicleta.jpg" alt="Familia en bicicleta">
+      <img src="assets/img/partesbicicleta.jpg" alt="Partes de bicicleta">
+      <img src="assets/img/adultosbicicleta.jpg" alt="Adultos en bicicleta">
+    </aside>
+
+  </main>
+
+  <section class="inscripcion-box">
+    <div class="titulo-inscripcion">Ficha de inscripción</div>
+
+    <form action="enviar_inscripcion.php" method="post" class="inscripcion-form" novalidate>
+      <div class="form-grid">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+
+        <div>
+          <label for="apellido">Apellidos</label>
+          <input id="apellido" name="apellido" type="text" required>
+        </div>
+
+        <div>
+          <label for="edad">Edad</label>
+          <input id="edad" name="edad" type="number" min="8" required>
+        </div>
+
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="tel" required>
+        </div>
+
+        <div class="full">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+
+        <div class="full">
+          <label for="observ">Observaciones</label>
+          <textarea id="observ" name="observ"></textarea>
+        </div>
+
+        <div class="full checkbox-row">
+          <input id="aut" name="aut" type="checkbox" required>
+          <label for="aut">Autorizo la participación y acepto las normas y el seguro del curso.</label>
+        </div>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn-map" class="btn-primary">Enviar inscripción</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- FOOTER copiado del otro código -->
+  <footer>
+    <div class="footer-container">
+      <section class="footer-section-1">
+        <div>
+          <h4 class="title-page">ZikoLaudio</h4>
+        </div>
+        <div class="footer-socials">
+          <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+            <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+            <a href="https://x.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
+            <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div>
+            <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+      </section>
+      <section class="footer-section-3">
+        <div>
+          <ul>
+            <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Cookies</a></li>
+            <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Aviso Legal</a></li>
+            <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Privacidad</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <section class="footer-section-2">
+      <p>Copyright 2025 | Club Ciclista ZikloLaudio</p>
+      <br>
+    </section>
+  </footer>
+
+</body>
+</html>

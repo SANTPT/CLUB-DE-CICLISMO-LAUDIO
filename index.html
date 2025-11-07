@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/inicio.css">
-    <title>Club Ciclismo ZikloLaudio</title>
+    <title>Club Ciclista ZikloLaudio</title>
 </head>
 
 <body>
@@ -30,10 +30,10 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
             <label for="menu-toggle" class="menu-icon">☰</label>
             
             <nav id="nav-menu">
-                <a href="index.html">Inicio</a>
+                <a href="index.html"class="link-activo">Inicio</a>
                 <a href="quienes_somos.html">Quienes somos</a>
                 <a href="rutas.html">Rutas</a>
-                <a href="">Cursos</a>
+                <a href="cursos.html">Cursos</a>
                 <a href="Contacto.html">Contacto</a>           
             </nav>
         </div>
@@ -45,10 +45,10 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
         <section class="bienvenido">
             <div class="carrusel-box">
                 <ul>
-                    <li><img src="assets/img/1.png" alt=""></li>
-                    <li><img src="assets/img/2.png" alt=""></li>
-                    <li><img src="assets/img/3.png" alt=""></li>
-                    <li><img src="assets/img/4.png" alt=""></li>                    
+                    <li><img src="assets/img/1.png" alt="Paisaje de Llodio"></li>
+                    <li><img src="assets/img/2.png" alt="Bicicletas en cerro"></li>
+                    <li><img src="assets/img/3.png" alt="Ciclistas subiendo un cerro"></li>
+                    <li><img src="assets/img/4.png" alt="Ciclistas en caminos rocosos"></li>                    
                     <li></li>
                 </ul>            </div>            
             <article class="bloque-bienvenido">
@@ -78,7 +78,8 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
                 <input class="buscar" type="text" name="buscar" placeholder="Buscar..">
                 <div class="entradas-rec">
                     <h3>Entradas recientes</h3>
-                    <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p>
+                    <p>Salida hasta Amurrio- <br>Domindo 09 de Noviembre 2025</p> <br>
+                    <p>Salida hasta Titulcia- <br>Domingo 16 de Noviembre 2025</p>
                 </div>
 
                 <div class="archivos"> 
@@ -102,12 +103,12 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
 
                 <div class="categorias">
                     <h3>Categorías</h3>
-                    <select name="categoria" class="elegir">
+                    <select id="categoria" name="categorias" class="elegir">
                         <option  value="">Elegir la categoría</option>
                         <option value="carreras">Carreras</option>
                         <option value="eventos">Eventos</option>
-                        <option value="rutas">Rutas</option>
-                        <option value="cursos">Cursos</option>
+                        <option value="rutas.html">Rutas</option>
+                        <option value="cursos.html">Cursos</a></option>
                     </select>
                 </div>
             </div>
@@ -125,28 +126,28 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
                 </div>
                 <div class="footer-socials">
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://x.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                     <div style="border-right: #F8A002 4px solid;padding-right: 1rem;">
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                     <div>
-                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
             </section>
             <section class="footer-section-3">
                 <div>
                     <ul>
-                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Cookies</a></li>
-                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Aviso Legal</a></li>
-                        <li> <i class="fa-solid fa-angle-right"></i> <a href="#">Privacidad</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="legal.html#cookies">Cookies</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="legal.html#aviso">Aviso Legal</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i> <a href="legal.html#privacidad">Privacidad</a></li>
                     </ul>
                 </div>
             </section>   
@@ -159,6 +160,11 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     </footer>
 
 
-    
+    <script>
+  const select = document.getElementById('categoria');
+  select.addEventListener('change', () => {
+    if (select.value) window.location.href = select.value;
+  });
+</script>
 </body>
 </html>

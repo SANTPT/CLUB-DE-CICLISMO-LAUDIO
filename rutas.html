@@ -34,7 +34,7 @@
                 <a href="index.html">Inicio</a>
                 <a href="quienes_somos.html">Quienes somos</a>
                 <a href="rutas.html" class="link-activo">Rutas</a>
-                <a href="Curso.html">Cursos</a>
+                <a href="cursos.html">Cursos</a>
                 <a href="Contacto.html">Contacto</a>
             </nav>
         </div>
@@ -56,7 +56,7 @@
                 <h3 class="text-center">Rutas Más Populares</h3>
             </section>
 
-            <section class="section-rutas">
+            <section class="section-rutas" id="card-ruta-1">
                 <div class="card-ruta">
                     <img src="assets/img/amurio.jpg" alt="Ruta en bici por Amurrio">
                     <img src="assets/img/araba.jpg" alt="Ruta en bici por Araba">
@@ -92,7 +92,7 @@
                 </div>
             </section>
             <hr>
-            <section class="section-rutas">
+            <section class="section-rutas" id="card-ruta-2">
                 <div class="card-ruta">
                     <img src="assets/img/atazar1.jpg" alt="Ruta en bici por atazar montania">
                     <img src="assets/img/atazar2.jpg" alt="Ruta en bici por atazar paisaje">
@@ -132,7 +132,7 @@
                 </div>
             </section>
             <hr>
-            <section class="section-rutas">
+            <section class="section-rutas" id="card-ruta-3">
                 <div class="card-ruta">
                     <img src="assets/img/patones1.jpg" alt="Ruta en bici por patones Bicicleta">
                     <img src="assets/img/patones2.jpg" alt="Ruta en bici por patones Personas">
@@ -171,6 +171,42 @@
                     </iframe>
                 </div>
             </section>
+            <hr>
+            <section class="section-rutas" id="card-ruta-4">
+                <div class="card-ruta">
+                    <img src="assets/img/titulcia1.jpg" alt="Ruta en bici por Titulcia - Persona">
+                    <img src="assets/img/titulcia2.jpg" alt="Ruta en bici por Titulcia - Persona en Bici">
+                    <img src="assets/img/titulcia4.jpg" alt="Ruta en bici por Titulcia - Senderos">
+                    <img src="assets/img/titulcia3.jpg" alt="Ruta en bici por Titulcia - Camino">
+                    <div class="content-card">
+                        <br>
+                        <h3>4. Titulcia - Senderos Divertidos- Las Termopilas</h3>
+                        <br>
+                        <p class="info-ruta">
+                            <i class="fa-solid fa-arrows-left-right"></i> 53,33 km ·
+                            <i class="fa-solid fa-clock-rotate-left"></i> 3 horas 41 minutos ·
+                            <i class="fa-solid fa-arrow-trend-up"></i> 953 m·
+                            <i class="fa-solid fa-arrow-trend-down"></i> 953 m
+                        </p>
+                        <br>
+                        <p class="card-descripcion"><i>Del total de la ruta, casi más de un 80% son senderos, de todo tipo, fáciles, rápidos , de subida, de bajada, algunos pasos técnicos, solo hay que bajarse de la bici entre tres subidas y una o dos bajadas, en puntos muy concretos.</i></p>
+                    </div>
+                    <div>
+                        <button class="btn-map" name="ruta4" onclick="verMapa(this)">Ver Mapa <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="card-ruta mapa-oculto" id="ruta4">
+                    <h3>RUTA</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d48778.35831502176!2d-3.5491446242573983!3d40.17240378362248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e1!4m5!1s0xd42108f163ac863%3A0x3c9ad53025de1e91!2sTitulcia%2C%2028359%2C%20Madrid!3m2!1d40.1377552!2d-3.5698814!4m5!1s0xd421754de9e6e77%3A0xb2750477d715b4b8!2sEl%20Pingarr%C3%B3n%2C%20San%20Mart%C3%ADn%20de%20la%20Vega!3m2!1d40.2079595!2d-3.5162714999999998!4m5!1s0xd421304e62c4501%3A0x4b73057224800f1a!2sNuevo%20Chinchon%2C%20C.%20de%20Don%20Luis%20Jer%C3%B3nimo%2C%2034-54%2C%2028370%20Chinch%C3%B3n%2C%20Madrid!3m2!1d40.140478!2d-3.4498577999999998!4m5!1s0xd42108f163ac863%3A0x3c9ad53025de1e91!2sTitulcia%2C%2028359%2C%20Madrid!3m2!1d40.1377552!2d-3.5698814!5e0!3m2!1ses-419!2ses!4v1762421536986!5m2!1ses-419!2ses" 
+                        width="600" 
+                        height="450" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
 
 
         </main>
@@ -179,10 +215,10 @@
         <aside class="aside-lateral">
             <div class="aside-container">
                 <ul>
-                    <li><a href="#ruta1"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Bilbao</a></li>
-                    <li><a href="#ruta2"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Madrid</a></li>
-                    <li><a href="#ruta3"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Valencia</a></li>
-                    <li><a href="#ruta4"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Barcelona</a></li>
+                    <li><a href="#card-ruta-4"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Bilbao</a></li>
+                    <li><a href="#card-ruta-3"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Madrid</a></li>
+                    <li><a href="#card-ruta-2"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Valencia</a></li>
+                    <li><a href="#card-ruta-1"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Barcelona</a></li>
                     <li><a href="#ruta5"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Sevilla</a></li>
                     <li><a href="#ruta6"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Mallorca</a></li>
                     <li><a href="#ruta7"> <i class="fa-solid fa-xs fa-chevron-right"></i> Rutas en Andalucía</a></li>
