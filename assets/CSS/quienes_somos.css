@@ -18,6 +18,7 @@
 
 body {
   font-family: var(--texto);
+
 }
 
 /* --- 1. SECCIÓN SUPERIOR (Imagen y Texto) --- */
@@ -25,7 +26,7 @@ body {
     display: flex; 
     gap: 1.875rem ; 
     align-items: flex-start;
-    
+    padding: 1.5rem 2rem;
 }
 
 
@@ -36,7 +37,7 @@ body {
     margin-top: 1%;
     overflow: hidden;
     width: 50rem;
-    height: 32rem;
+    height: 40%;
     
 }
 .imagen-container-carrusel-box ul{
@@ -122,8 +123,8 @@ body {
     gap: 1.875rem;
     margin-top: 0rem; 
     align-items: flex-start;
-    margin-left: 10rem;
-    margin-right: 8rem;
+    margin-left: 10%;
+    margin-right: 6%;
 }
 
 /* RUEDA: Definición de tamaño y posición */
@@ -226,7 +227,7 @@ position: absolute;
 
 /* --- 4. MEDIA QUERIES (PARA RESPONSIVE) --- */
 /* --- TABLET --- */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
     .seccion-superior,
     .contenido-adicional {
         flex-direction: column;
@@ -335,7 +336,7 @@ position: absolute;
 }
     
     /* --- DISPOSITIVO MOVIL --- */
-    @media (min-width: 393px) and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 599px) {
     .seccion-superior,
     .contenido-adicional {
         flex-direction: column;
