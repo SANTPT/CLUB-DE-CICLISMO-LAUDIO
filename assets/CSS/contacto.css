@@ -123,23 +123,23 @@
       header {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        /* padding: 20px; */
       }
 
-      .logo-container {
+      /* .logo-container {
         position: static;
         margin-bottom: 10px;
         justify-content: center;
-      }
+      } */
 
-      .logo-container img { 
+      /* .logo-container img { 
         width: 60px;
         height: 60px;
       }
 
       .logo-text {
         font-size: 40px;
-      }
+      } */
 
       nav {
         margin-left: 0;

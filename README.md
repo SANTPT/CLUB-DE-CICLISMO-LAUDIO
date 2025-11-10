@@ -41,4 +41,4 @@ Las imágenes utilizadas en este proyecto fueron tomadas de los siguientes enlac
 * https://es.wikiloc.com/
 
 ## 👩‍💻 Autores
-Desarrollado por Marlen Alvarez, Kevin Ruiz, Santiago Patiño, German Illan y Jeremy Peralta
+Desarrollado por [Marlen Alvarez](https://www.linkedin.com/in/marlenalvarez/), [Kevin Ruiz](www.linkedin.com/in/kevin-ruiz-231a8025a), [Santiago Patiño](https://www.linkedin.com/in/ingsantpatino/), [German Illan](https://www.linkedin.com/in/germán-illán-27b132275/) y [Yeremi Peralta](https://www.linkedin.com/in/yeremi-peralta-javier-b88628155/)
