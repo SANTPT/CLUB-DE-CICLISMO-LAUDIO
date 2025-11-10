@@ -19,7 +19,7 @@ body {
   color: #111;
 }
 
-/* Ajustes individuales para imágenes en la galería (si los quieres) */
+
 .galeria img:nth-child(2) {
   position: relative;
   left: -300px;

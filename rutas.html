@@ -272,11 +272,11 @@
     <script>
 
         function verMapa(btnVerMapa) {
-            const idRuta = btnVerMapa.name;
+            const idRuta = btnVerMapa.name; //LLamada al booton con sus propiedades
             // console.log(idRuta);
-            const mapaCard = document.getElementById(idRuta);
+            const mapaCard = document.getElementById(idRuta); //llamada al div donde esta el mapa por el id mediante el name del boton
 
-            if (mapaCard.classList.contains('visible')) {
+            if (mapaCard.classList.contains('visible')) { //si el div esta visible, quiero que lo oculte
 
                 mapaCard.style.opacity = '0';
 
@@ -285,7 +285,7 @@
                     mapaCard.classList.remove('visible');
                 }, 500);
 
-                btnVerMapa.textContent = 'Ver Mapa';
+                btnVerMapa.textContent = 'Ver Mapa'; //cambio el texto del boton
 
             } else {
                 mapaCard.style.display = 'block';
@@ -295,7 +295,7 @@
                     mapaCard.style.opacity = '1';
                 }, 10);
 
-                btnVerMapa.textContent = 'Ocultar Mapa';
+                btnVerMapa.textContent = 'Ocultar Mapa'; //cambio el texto del boton
             }
 
         }
