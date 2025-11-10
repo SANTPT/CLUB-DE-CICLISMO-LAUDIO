@@ -16,7 +16,7 @@ Las imágenes utilizadas en este proyecto fueron tomadas de los siguientes enlac
 * https://www.esciclismo.com/actualidad/carretera/88614.html
 * https://share.google/images/Gjgx8fnnOzzOUSIcE
 * https://paginadeldistrito.com/el-club-ciclista-las-rosas-escala-los-lagos-de-covadonga
-* https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.autorent.es%2Frutas-bici-valencia%2F&psig=AOvVaw3KzDIG8j3RTTQK2qpbHrdW&ust=1762595559440000&source=images&cd=vfe&   opi=89978449&ved=0CBUQ3YkBahcKEwjYr9Om4t-QAxUAAAAAHQAAAAAQBA
+* https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.autorent.es%2Frutas-bici-valencia%2F&psig=AOvVaw3KzDIG8j3RTTQK2qpbHrdW&ust=1762595559440000&source=images&cd=vfe&opi=89978449&ved=0CBUQ3YkBahcKEwjYr9Om4t-QAxUAAAAAHQAAAAAQBA
 * https://www.facebook.com/winitsports/
 * https://turismo.euskadi.eus/contenidos/blog_post/0000000981_post_turismo/es_981/
 * https://share.google/images/Gjgx8fnnOzzOUSIcE
