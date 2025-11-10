@@ -2,9 +2,24 @@
 
 Este es un proyecto de carácter exclusivamente educativo cuyo único fin es afianzar y poner en práctica los conceptos adquiridos. Para este ejercicio, se ha seleccionado el caso hipotético de un club de ciclismo ubicado en Llodio (Álava), debido a que esta zona y sus alrededores cuentan con una topografía ideal para la práctica de este deporte.
 
-
 Este proyecto es una **página web responsive** desarrollada con **HTML, CSS y JavaScript**.  
 Se adapta a diferentes tamaños de pantalla (escritorio, tablet y móvil) utilizando **media queries** para ofrecer una experiencia óptima.
+
+## 🧩 Tecnologías utilizadas
+- HTML5  
+- CSS3 (Flexbox y Grid)  
+- Git / GitHub  
+
+## 🧭 Características
+- Diseño moderno y adaptable  
+- Navegación sencilla e intuitiva  
+- Estructura organizada con CSS Grid y Flexbox  
+
+## 📱 Vista responsive
+Diseñada para visualizar correctamente en:
+- 💻 Escritorio  
+- 📱 Tablet  
+- 📲 Móvil  
 
 ## Autoria de las imagenes:
 
@@ -25,21 +40,5 @@ Las imágenes utilizadas en este proyecto fueron tomadas de los siguientes enlac
 * https://share.google/images/ILMV7kzGFz2Q4fNk7
 * https://es.wikiloc.com/
 
-## 🧩 Tecnologías utilizadas
-- HTML5  
-- CSS3 (Flexbox y Grid)  
-- Git / GitHub  
-
-## 🧭 Características
-- Diseño moderno y adaptable  
-- Navegación sencilla e intuitiva  
-- Estructura organizada con CSS Grid y Flexbox  
-
-## 📱 Vista responsive
-Diseñada para visualizar correctamente en:
-- 💻 Escritorio  
-- 📱 Tablet  
-- 📲 Móvil  
-
-## 👩‍💻 Autor
+## 👩‍💻 Autores
 Desarrollado por Marlen Alvarez, Kevin Ruiz, Santiago Patiño, German Illan y Jeremy Peralta
